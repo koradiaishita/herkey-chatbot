@@ -150,6 +150,181 @@ mindmap
 
 Herkey Chatbot (officially named **Asha_AI_Chatbot**) is a conversational AI assistant designed to support women in their career development through the JobsForHer platform. Asha serves as a virtual career companion, providing guidance and resources across multiple career-focused domains.
 
+## 🌟 Features Offered by Asha AI 🌟
+
+<div align="center">
+
+### 🔍 Core Capabilities & Implementation
+
+```mermaid
+graph TD
+    classDef primary fill:#4285F4,color:white,stroke:none,stroke-width:0px
+    classDef secondary fill:#EA4335,color:white,stroke:none,stroke-width:0px
+    classDef tertiary fill:#FBBC05,color:#333,stroke:none,stroke-width:0px
+    classDef quaternary fill:#34A853,color:white,stroke:none,stroke-width:0px
+    
+    A[Asha AI<br>Chatbot]:::primary
+    
+    A --> B[Career<br>Development]:::secondary
+    A --> C[Community<br>Engagement]:::tertiary
+    A --> D[Learning &<br>Growth]:::quaternary
+    A --> E[Job<br>Opportunities]:::secondary
+    
+    B --> B1[Passion Discovery]:::secondary
+    B --> B2[Career Path Planning]:::secondary
+    B --> B3[Skill Assessment]:::secondary
+    
+    C --> C1[Community Joining]:::tertiary
+    C --> C2[Networking Events]:::tertiary
+    C --> C3[Industry Communities]:::tertiary
+    
+    D --> D1[Learning Resources]:::quaternary
+    D --> D2[Mentorship Connections]:::quaternary
+    D --> D3[Skill Development]:::quaternary
+    
+    E --> E1[Job Search]:::secondary
+    E --> E2[Application Guidance]:::secondary
+    E --> E3[Interview Preparation]:::secondary
+    
+    click B1 "https://github.com/koradiaishita/herkey-chatbot/tree/main/flows/FIND_YOUR_PASSION" "Passion Discovery Flow"
+    click C1 "https://github.com/koradiaishita/herkey-chatbot/tree/main/flows/JOIN_COMMUNITY" "Community Flow"
+    click D1 "https://github.com/koradiaishita/herkey-chatbot/tree/main/flows/LEARNING_RESOURCES" "Learning Resources Flow"
+    click E1 "https://github.com/koradiaishita/herkey-chatbot/tree/main/flows/JOB_SEARCH" "Job Search Flow"
+```
+
+</div>
+
+### ✨ Feature Catalog
+
+<table>
+  <tr>
+    <th colspan="2" align="center">🌟 Career Development Features 🌟</th>
+  </tr>
+  <tr>
+    <td width="50%">
+      <h4>🧭 Passion Discovery</h4>
+      <ul>
+        <li>Interest assessment questionnaires</li>
+        <li>Skill-to-career mapping</li>
+        <li>Value alignment exploration</li>
+        <li>Industry compatibility analysis</li>
+      </ul>
+    </td>
+    <td width="50%">
+      <h4>📈 Career Path Planning</h4>
+      <ul>
+        <li>Personalized growth roadmaps</li>
+        <li>Industry transition guidance</li>
+        <li>Role progression strategies</li>
+        <li>Advancement timeline planning</li>
+      </ul>
+    </td>
+  </tr>
+  <tr>
+    <th colspan="2" align="center">🌟 Community Features 🌟</th>
+  </tr>
+  <tr>
+    <td width="50%">
+      <h4>👥 Community Connections</h4>
+      <ul>
+        <li>Professional group recommendations</li>
+        <li>Community joining assistance</li>
+        <li>Peer network suggestions</li>
+        <li>Industry-specific forums</li>
+      </ul>
+    </td>
+    <td width="50%">
+      <h4>🗓️ Event Discovery</h4>
+      <ul>
+        <li>Personalized event recommendations</li>
+        <li>Networking opportunity alerts</li>
+        <li>Workshop & webinar suggestions</li>
+        <li>Conference & meetup information</li>
+      </ul>
+    </td>
+  </tr>
+  <tr>
+    <th colspan="2" align="center">🌟 Learning & Mentorship Features 🌟</th>
+  </tr>
+  <tr>
+    <td width="50%">
+      <h4>📚 Learning Resources</h4>
+      <ul>
+        <li>Skill-based learning recommendations</li>
+        <li>Course & certification guidance</li>
+        <li>Educational content curation</li>
+        <li>Self-development resources</li>
+      </ul>
+    </td>
+    <td width="50%">
+      <h4>👨‍🏫 Mentorship</h4>
+      <ul>
+        <li>Mentor matching suggestions</li>
+        <li>Mentorship program information</li>
+        <li>Mentor communication guidance</li>
+        <li>Mentorship goal setting</li>
+      </ul>
+    </td>
+  </tr>
+  <tr>
+    <th colspan="2" align="center">🌟 Job Opportunity Features 🌟</th>
+  </tr>
+  <tr>
+    <td width="50%">
+      <h4>🔍 Job Search</h4>
+      <ul>
+        <li>Personalized job recommendations</li>
+        <li>Role qualification assessment</li>
+        <li>Job alert configuration</li>
+        <li>Opportunity-skill alignment</li>
+      </ul>
+    </td>
+    <td width="50%">
+      <h4>📝 Application Support</h4>
+      <ul>
+        <li>Application process guidance</li>
+        <li>Document preparation tips</li>
+        <li>Follow-up strategies</li>
+        <li>Interview preparation</li>
+      </ul>
+    </td>
+  </tr>
+</table>
+
+### 📱 User Interface Features
+
+<div align="center">
+
+```mermaid
+journey
+    title Interaction Capabilities
+    section Input Methods
+      Text-based chat: 5
+      Quick reply chips: 5
+      Form selections: 4
+    section Response Formats
+      Conversational text: 5
+      Resource links: 5
+      Interactive elements: 4
+      Rich media cards: 3
+    section User Experience
+      Context awareness: 5
+      Conversation memory: 4
+      Multi-topic handling: 4
+      Natural dialogue: 5
+```
+
+</div>
+
+### 🔌 Integration Capabilities
+
+- 🔄 **JobsForHer Platform**: Seamless integration with job listings and resources
+- 📅 **Event Systems**: Connection to event registration and discovery platforms
+- 👥 **Community Platforms**: Links to professional communities and forums
+- 📚 **Learning Management Systems**: Access to courses and educational content
+- 📊 **Analytics**: Performance tracking and interaction measurement
+- 📱 **Multi-Channel Support**: Web, mobile, and messaging platform availability
+
 ### 🌟 Key Features
 
 | Feature | Description | Implementation |
