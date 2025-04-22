@@ -1,0 +1,11 @@
+{
+  "name": "49e81e3e-294d-4ae3-8f50-b4ab348684f9",
+  "displayName": "asha-ai",
+  "genericWebService": {
+    "uri": "https://asha-ai-chatbot-443180956629.asia-south1.run.app",
+    "webhookType": "STANDARD"
+  },
+  "timeout": {
+    "seconds": 30
+  }
+}

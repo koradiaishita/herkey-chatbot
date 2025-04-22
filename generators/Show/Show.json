@@ -1,0 +1,26 @@
+{
+  "name": "79fb7aa8-635a-4e85-b01c-f2bee3a477c3",
+  "displayName": "Show",
+  "placeholders": [ {
+    "id": "legacy",
+    "name": "legacy"
+  }, {
+    "id": "energy",
+    "name": "energy"
+  }, {
+    "id": "values",
+    "name": "values"
+  }, {
+    "id": "skills",
+    "name": "skills"
+  } ],
+  "modelParameter": {
+    "temperature": 0,
+    "maxDecodeSteps": 2275,
+    "topP": 0.94999999,
+    "topK": 40
+  },
+  "llmModelSettings": {
+    "model": "gemini-1.5-flash-002"
+  }
+}

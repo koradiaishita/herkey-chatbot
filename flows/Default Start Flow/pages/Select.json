@@ -1,0 +1,49 @@
+{
+  "name": "2391ed26-69f2-4f0c-9667-6d127db09e84",
+  "displayName": "Select",
+  "form": {
+  
+  },
+  "transitionRoutes": [ {
+    "intent": "find event",
+    "triggerFulfillment": {
+    
+    },
+    "targetFlow": "FIND_EVENTS",
+    "name": "ad2a8e77-17b0-47ce-ae2c-5b8208fb86a8"
+  }, {
+    "intent": "job_search",
+    "triggerFulfillment": {
+    
+    },
+    "targetFlow": "JOB_SEARCH",
+    "name": "36f4f185-55c4-4f84-b402-126f8328a201"
+  }, {
+    "intent": "Join Community",
+    "triggerFulfillment": {
+    
+    },
+    "targetFlow": "JOIN_COMMUNITY",
+    "name": "696759b3-b4f1-4de4-bc84-32adc295c508"
+  }, {
+    "intent": "Learning resources",
+    "triggerFulfillment": {
+    
+    },
+    "name": "7a6ebdde-2d30-4bdd-a8a8-56f39a224361"
+  }, {
+    "intent": "Find your passion",
+    "triggerFulfillment": {
+    
+    },
+    "targetFlow": "FIND_YOUR_PASSION",
+    "name": "34bcae04-4269-4100-976f-9366209bfaf0"
+  }, {
+    "intent": "Mentorship",
+    "triggerFulfillment": {
+    
+    },
+    "name": "cc6e1ab0-0b6f-4ff7-a548-edccc9310ddc",
+    "targetPlaybook": "mentorship"
+  } ]
+}

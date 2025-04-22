@@ -1,0 +1,48 @@
+{
+  "name": "43ffcee6-222f-471d-be05-20508877e674",
+  "displayName": "Result",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+    "messages": [ {
+      "text": {
+        "text": [ "$request.generative.passion" ]
+      },
+      "languageCode": "en"
+    } ],
+    "advancedSettings": {
+      "playbackInterruptionSettings": {
+      
+      },
+      "dtmfSettings": {
+        "useSystemEntityRule": false
+      }
+    },
+    "generators": [ {
+      "generator": "projects/gen-ai-guru-gdg-pune/locations/asia-south1/agents/b2c5e90b-20ef-4b0c-96d1-49537c77a2cf/generators/79fb7aa8-635a-4e85-b01c-f2bee3a477c3",
+      "inputParameters": [ {
+        "key": "energy",
+        "value": "$session.params.energy"
+      }, {
+        "key": "legacy",
+        "value": "$session.params.legacy"
+      }, {
+        "key": "skills",
+        "value": "$session.params.skills"
+      }, {
+        "key": "values",
+        "value": "$session.params.values"
+      } ],
+      "outputParameter": "$request.generative.passion"
+    } ]
+  },
+  "transitionRoutes": [ {
+    "condition": "True",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "End Session",
+    "name": "5c44e297-8594-44d9-8e1c-904859356f2e"
+  } ]
+}

@@ -1,0 +1,223 @@
+{
+  "name": "52dcb1a1-8952-4059-8d78-397d9ce18898",
+  "displayName": "Ask que",
+  "form": {
+    "parameters": [ {
+      "displayName": "job_mode",
+      "required": true,
+      "entityType": "@job_mode",
+      "fillBehavior": {
+        "initialPromptFulfillment": {
+          "messages": [ {
+            "text": {
+              "text": [ "What type of job position are you interested in? Please specify the industry or role you're looking for. " ]
+            },
+            "languageCode": "en"
+          }, {
+            "payload": {
+              "richContent": [ [ {
+                "options": [ {
+                  "text": "WFO"
+                }, {
+                  "text": "Hybrid"
+                }, {
+                  "text": "WFH"
+                } ],
+                "type": "chips"
+              } ] ]
+            },
+            "languageCode": "en"
+          } ],
+          "advancedSettings": {
+            "playbackInterruptionSettings": {
+            
+            },
+            "dtmfSettings": {
+              "useSystemEntityRule": false
+            }
+          }
+        },
+        "repromptEventHandlers": [ {
+          "event": "sys.no-input-1",
+          "triggerFulfillment": {
+            "messages": [ {
+              "text": {
+                "text": [ "Please select the right job type" ]
+              },
+              "languageCode": "en"
+            }, {
+              "payload": {
+                "richContent": [ [ {
+                  "options": [ {
+                    "text": "WFO"
+                  }, {
+                    "text": "Hybrid"
+                  }, {
+                    "text": "WFH"
+                  } ],
+                  "type": "chips"
+                } ] ]
+              },
+              "languageCode": "en"
+            } ],
+            "advancedSettings": {
+              "playbackInterruptionSettings": {
+              
+              },
+              "dtmfSettings": {
+                "useSystemEntityRule": false
+              }
+            }
+          },
+          "name": "c88be3bc-7e52-4d63-aac8-b9ed4a064f14"
+        } ]
+      }
+    }, {
+      "displayName": "job_role",
+      "required": true,
+      "entityType": "@sys.any",
+      "fillBehavior": {
+        "initialPromptFulfillment": {
+          "messages": [ {
+            "text": {
+              "text": [ "What type of job role are you looking for? For example, software engineer, project manager, data analyst, etc" ]
+            },
+            "languageCode": "en"
+          } ],
+          "advancedSettings": {
+            "playbackInterruptionSettings": {
+            
+            },
+            "dtmfSettings": {
+              "useSystemEntityRule": false
+            }
+          }
+        }
+      }
+    }, {
+      "displayName": "experience",
+      "required": true,
+      "entityType": "@sys.any",
+      "fillBehavior": {
+        "initialPromptFulfillment": {
+          "messages": [ {
+            "text": {
+              "text": [ "And how many years of experience do you have in this field?\"" ]
+            },
+            "languageCode": "en"
+          } ],
+          "advancedSettings": {
+            "playbackInterruptionSettings": {
+            
+            },
+            "dtmfSettings": {
+              "useSystemEntityRule": false
+            }
+          }
+        }
+      }
+    } ]
+  },
+  "entryFulfillment": {
+    "advancedSettings": {
+      "playbackInterruptionSettings": {
+      
+      },
+      "dtmfSettings": {
+        "useSystemEntityRule": false
+      }
+    }
+  },
+  "transitionRoutes": [ {
+    "condition": "$session.params.job_mode = \"WFH\" AND $page.params.status = \"FINAL\"",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "Thanks for sharing those details! I'm searching for $session.params.job_mode $session.params.job_role positions that require $session.params.experience years of experience." ]
+        },
+        "languageCode": "en"
+      }, {
+        "payload": {
+          "richContent": [ [ {
+            "accessibilityText": "Software Engineer",
+            "rawUrl": "https://example.com/images/job1.png",
+            "type": "image"
+          }, {
+            "actionLink": "https://your-job-link.com/job1",
+            "subtitle": "Remote | Entry Level",
+            "title": "Software Engineer",
+            "type": "info"
+          }, {
+            "options": [ {
+              "anchor": {
+                "href": "https://your-job-link.com/job1"
+              },
+              "text": "Apply Now"
+            }, {
+              "text": "Save Job"
+            } ],
+            "type": "chips"
+          } ], [ {
+            "accessibilityText": "Data Scientist",
+            "rawUrl": "https://example.com/images/job2.png",
+            "type": "image"
+          }, {
+            "actionLink": "https://your-job-link.com/job2",
+            "subtitle": "Onsite | Mid Level",
+            "title": "Data Scientist",
+            "type": "info"
+          }, {
+            "options": [ {
+              "anchor": {
+                "href": "https://your-job-link.com/job2"
+              },
+              "text": "Apply Now"
+            }, {
+              "text": "Save Job"
+            } ],
+            "type": "chips"
+          } ], [ {
+            "accessibilityText": "DevOps Engineer",
+            "rawUrl": "https://example.com/images/job3.png",
+            "type": "image"
+          }, {
+            "actionLink": "https://your-job-link.com/job3",
+            "subtitle": "Hybrid | Senior Level",
+            "title": "DevOps Engineer",
+            "type": "info"
+          }, {
+            "options": [ {
+              "anchor": {
+                "href": "https://your-job-link.com/job3"
+              },
+              "text": "Apply Now"
+            }, {
+              "text": "Save Job"
+            } ],
+            "type": "chips"
+          } ] ]
+        },
+        "languageCode": "en"
+      } ],
+      "webhook": "asha-ai",
+      "tag": "job_search",
+      "advancedSettings": {
+        "playbackInterruptionSettings": {
+        
+        },
+        "dtmfSettings": {
+          "useSystemEntityRule": false
+        }
+      }
+    },
+    "targetPage": "show_wfh_jobs",
+    "name": "a5159ef5-72df-42ae-9a23-ffe9e25cbd2e"
+  }, {
+    "condition": "$session.params.job_mode = \"WFO\" OR $session.params.job_mode = \"Hybrid\"",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "ask_location",
+    "name": "a68dfb4e-0d48-4ef9-b975-2f8051f08693"
+  } ]
+}

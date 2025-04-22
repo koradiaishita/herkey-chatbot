@@ -1,0 +1,58 @@
+{
+  "name": "59deef4f-4d68-4f67-8c31-19228a813a61",
+  "displayName": "FIND_YOUR_PASSION",
+  "transitionRoutes": [ {
+    "condition": "True",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "Welcome to the Passion Discovery Assessment by JobsForHer Foundation! I'm Asha, your AI career guide. This assessment will help you uncover your professional passion through 5 key dimensions: Interests, Skills, Values, Energy, and Legacy. By understanding these aspects of yourself, you'll gain clarity on career paths that truly align with who you are. Let's begin this journey of self-discovery together!" ]
+        },
+        "languageCode": "en"
+      } ],
+      "advancedSettings": {
+        "playbackInterruptionSettings": {
+        
+        },
+        "dtmfSettings": {
+          "useSystemEntityRule": false
+        }
+      }
+    },
+    "targetPage": "Ask a question",
+    "name": "6a978386-5379-4a4e-94c5-ac3769a9b278"
+  } ],
+  "eventHandlers": [ {
+    "event": "sys.no-match-default",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "I didn't get that. Can you say it again?", "I missed what you said. What was that?", "Sorry, could you say that again?", "Sorry, can you say that again?", "Can you say that again?", "Sorry, I didn't get that. Can you rephrase?", "Sorry, what was that?", "One more time?", "What was that?", "Say that one more time?", "I didn't get that. Can you repeat?", "I missed that, say that again?" ]
+        },
+        "languageCode": "en"
+      } ]
+    },
+    "name": "16021fac-7ff5-4468-ac94-9e056b052c1b"
+  }, {
+    "event": "sys.no-input-default",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "I didn't get that. Can you say it again?", "I missed what you said. What was that?", "Sorry, could you say that again?", "Sorry, can you say that again?", "Can you say that again?", "Sorry, I didn't get that. Can you rephrase?", "Sorry, what was that?", "One more time?", "What was that?", "Say that one more time?", "I didn't get that. Can you repeat?", "I missed that, say that again?" ]
+        },
+        "languageCode": "en"
+      } ]
+    },
+    "name": "8de21e74-a9d2-41cf-820f-be94a48c467c"
+  } ],
+  "nluSettings": {
+    "modelType": "MODEL_TYPE_ADVANCED",
+    "classificationThreshold": 0.30000001
+  },
+  "nluSettingsList": [ {
+    "modelType": "MODEL_TYPE_ADVANCED",
+    "classificationThreshold": 0.30000001,
+    "customConfigKey": "7275297f-6f02-4d62-b453-eb1fd112cdb7",
+    "languageCode": "en"
+  } ]
+}

@@ -1,0 +1,124 @@
+{
+  "name": "00000000-0000-0000-0000-000000000000",
+  "displayName": "Default Start Flow",
+  "description": "A start flow created along with the agent",
+  "transitionRoutes": [ {
+    "intent": "Default Welcome Intent",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "Hi! I'm Asha, your AI career companion from JobsForHer. I'm dedicated to supporting your professional growth", "Greetings! I'm Asha from JobsForHer Foundation. I'm here to support women in their career journeys. How may I help you today?", "Welcome! I'm Asha, your virtual career assistant from JobsForHer. I'm here to help empower your professional journey.", "Hi there! I'm Asha, here to assist with your career development needs. What brings you to JobsForHer today? ", "Hello! I'm Asha, your AI assistant from JobsForHer Foundation. How can I support your professional journey today?" ]
+        },
+        "languageCode": "en"
+      }, {
+        "payload": {
+          "richContent": [ [ {
+            "options": [ {
+              "text": "Job Search"
+            }, {
+              "text": "Find Events"
+            }, {
+              "text": "Mentorship"
+            }, {
+              "text": "Resume Analysis"
+            }, {
+              "text": "Join Community"
+            }, {
+              "text": "Learning resources"
+            }, {
+              "text": "Find your passion"
+            }, {
+              "text": "Feedback"
+            } ],
+            "type": "chips"
+          } ] ]
+        },
+        "languageCode": "en"
+      } ],
+      "advancedSettings": {
+        "playbackInterruptionSettings": {
+        
+        },
+        "dtmfSettings": {
+          "useSystemEntityRule": false
+        }
+      }
+    },
+    "targetPage": "Select",
+    "name": "84050774-3dbe-4ba5-81ac-ea87778b7f0b"
+  }, {
+    "intent": "find event",
+    "triggerFulfillment": {
+    
+    },
+    "targetFlow": "FIND_EVENTS",
+    "name": "9e875ced-bb7e-4a0e-929d-089484554efa"
+  }, {
+    "intent": "job_search",
+    "triggerFulfillment": {
+    
+    },
+    "targetFlow": "JOB_SEARCH",
+    "name": "5438fe4c-cb80-4895-bf21-f050d3b95b8a"
+  }, {
+    "intent": "Join Community",
+    "triggerFulfillment": {
+    
+    },
+    "targetFlow": "JOIN_COMMUNITY",
+    "name": "4a0d9aff-b5ed-44b5-a1ed-6e6e48309c8b"
+  }, {
+    "intent": "Learning resources",
+    "triggerFulfillment": {
+    
+    },
+    "name": "d8fc2d9a-f486-477c-9fe3-8145d41b6931"
+  }, {
+    "intent": "Find your passion",
+    "triggerFulfillment": {
+    
+    },
+    "targetFlow": "FIND_YOUR_PASSION",
+    "name": "607ce45f-4418-4730-b752-a5ee1c219132"
+  }, {
+    "intent": "Mentorship",
+    "triggerFulfillment": {
+    
+    },
+    "name": "fd4c55ea-bc92-4154-b234-2ad2923fbb7b",
+    "targetPlaybook": "mentorship"
+  } ],
+  "eventHandlers": [ {
+    "event": "sys.no-match-default",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "I didn't get that. Can you say it again?", "I missed what you said. What was that?", "Sorry, could you say that again?", "Sorry, can you say that again?", "Can you say that again?", "Sorry, I didn't get that. Can you rephrase?", "Sorry, what was that?", "One more time?", "What was that?", "Say that one more time?", "I didn't get that. Can you repeat?", "I missed that, say that again?" ]
+        },
+        "languageCode": "en"
+      } ]
+    },
+    "name": "23ed25ab-c1a3-4d26-9f37-3167bda41210"
+  }, {
+    "event": "sys.no-input-default",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "I didn't get that. Can you say it again?", "I missed what you said. What was that?", "Sorry, could you say that again?", "Sorry, can you say that again?", "Can you say that again?", "Sorry, I didn't get that. Can you rephrase?", "Sorry, what was that?", "One more time?", "What was that?", "Say that one more time?", "I didn't get that. Can you repeat?", "I missed that, say that again?" ]
+        },
+        "languageCode": "en"
+      } ]
+    },
+    "name": "1dc3fb26-295c-41dd-bfca-383be64d6f74"
+  } ],
+  "nluSettings": {
+    "modelType": "MODEL_TYPE_ADVANCED",
+    "classificationThreshold": 0.30000001
+  },
+  "nluSettingsList": [ {
+    "modelType": "MODEL_TYPE_ADVANCED",
+    "classificationThreshold": 0.30000001,
+    "customConfigKey": "15a62c05-5b79-44d2-95cf-08d84504836e",
+    "languageCode": "en"
+  } ]
+}

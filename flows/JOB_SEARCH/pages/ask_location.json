@@ -1,0 +1,37 @@
+{
+  "name": "b3fb5fa9-96ea-4fac-b9b3-3b52e8122327",
+  "displayName": "ask_location",
+  "form": {
+    "parameters": [ {
+      "displayName": "location",
+      "required": true,
+      "entityType": "@sys.location",
+      "fillBehavior": {
+        "initialPromptFulfillment": {
+          "messages": [ {
+            "text": {
+              "text": [ "Since you prefer working from office, which location would you prefer?" ]
+            },
+            "languageCode": "en"
+          } ],
+          "advancedSettings": {
+            "playbackInterruptionSettings": {
+            
+            },
+            "dtmfSettings": {
+              "useSystemEntityRule": false
+            }
+          }
+        }
+      }
+    } ]
+  },
+  "transitionRoutes": [ {
+    "condition": "$page.params.status = FINAL",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "show_jobs",
+    "name": "4930e8fc-a6bf-4dd5-b16f-bcc2ac906b4b"
+  } ]
+}

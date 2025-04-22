@@ -1,0 +1,15 @@
+{
+  "entities": [ {
+    "value": "WFH",
+    "synonyms": [ "Home", "offshore", "Remote", "WFH" ],
+    "languageCode": "en"
+  }, {
+    "value": "WFO",
+    "synonyms": [ "Office", "onsite", "WFO" ],
+    "languageCode": "en"
+  }, {
+    "value": "Hybrid",
+    "synonyms": [ "Both", "Hybrid" ],
+    "languageCode": "en"
+  } ]
+}

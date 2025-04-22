@@ -1,0 +1,88 @@
+{
+  "name": "f8bc2c03-8e42-4586-9124-002633d3719b",
+  "displayName": "show_jobs",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+    "messages": [ {
+      "payload": {
+        "richContent": [ [ {
+          "accessibilityText": "Work-From-Home",
+          "rawUrl": "https://example.com/images/work-from-home.png",
+          "type": "image"
+        }, {
+          "actionLink": "https://community-platform.com/work-from-home",
+          "subtitle": "Public | 179,015 Members",
+          "title": "Work-From-Home",
+          "type": "info"
+        }, {
+          "options": [ {
+            "anchor": {
+              "href": "https://community-platform.com/work-from-home"
+            },
+            "text": "Join Community"
+          }, {
+            "text": "Save Community"
+          } ],
+          "type": "chips"
+        } ], [ {
+          "accessibilityText": "Women Freelancers",
+          "rawUrl": "https://example.com/images/women-freelancers.png",
+          "type": "image"
+        }, {
+          "actionLink": "https://community-platform.com/women-freelancers",
+          "subtitle": "Public | 95,637 Members",
+          "title": "Women Freelancers",
+          "type": "info"
+        }, {
+          "options": [ {
+            "anchor": {
+              "href": "https://community-platform.com/women-freelancers"
+            },
+            "text": "Join Community"
+          }, {
+            "text": "Save Community"
+          } ],
+          "type": "chips"
+        } ], [ {
+          "accessibilityText": "RestartHer Academy",
+          "rawUrl": "https://example.com/images/restarther-academy.png",
+          "type": "image"
+        }, {
+          "actionLink": "https://community-platform.com/restarther-academy",
+          "subtitle": "Private | 34,442 Members",
+          "title": "RestartHer Academy",
+          "type": "info"
+        }, {
+          "options": [ {
+            "anchor": {
+              "href": "https://community-platform.com/restarther-academy"
+            },
+            "text": "Join Community"
+          }, {
+            "text": "Save Community"
+          } ],
+          "type": "chips"
+        } ] ]
+      },
+      "languageCode": "en"
+    } ],
+    "advancedSettings": {
+      "playbackInterruptionSettings": {
+      
+      },
+      "dtmfSettings": {
+        "useSystemEntityRule": false
+      }
+    }
+  },
+  "transitionRoutes": [ {
+    "condition": "True",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "End Session",
+    "name": "029f33b0-d161-41af-880c-d644e71d8770"
+  } ]
+}
