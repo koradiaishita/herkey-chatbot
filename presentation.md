@@ -40,6 +40,323 @@
 - 🔶 **Inclusion Driver**: Democratizes career guidance that was previously available only through expensive coaching
 - 🔶 **Success Accelerator**: Serves as a catalyst for women's professional advancement through informed decision-making
 
+## 💻 Technologies to be Used in the Solution
+
+<div align="center">
+
+### 🔍 Technology Stack Overview
+
+```mermaid
+mindmap
+  root((Asha AI<br>Tech Stack))
+    Conversational AI
+      Google Dialogflow CX
+      Natural Language Processing
+      Context Management
+    Frontend Technologies
+      Responsive Web Design
+      Progressive Web App
+      Cross-Platform UI
+    Backend Services
+      Google Cloud Functions
+      Node.js Microservices
+      RESTful APIs
+    Cloud Infrastructure
+      Google Cloud Platform
+      Serverless Architecture
+      Managed Services
+    Data Management
+      Cloud Firestore
+      BigQuery Analytics
+      Data Encryption
+    Integration Layer
+      Webhook Framework
+      API Gateway
+      Authentication Service
+    Deployment & DevOps
+      CI/CD Pipeline
+      Automated Testing
+      Monitoring & Logging
+```
+
+</div>
+
+### 🛠️ Core Technology Categories
+
+<table>
+  <tr>
+    <th colspan="4" align="center">🌟 Technology Selection Matrix 🌟</th>
+  </tr>
+  <tr>
+    <th align="center">Category</th>
+    <th align="center">Technology</th>
+    <th align="center">Purpose</th>
+    <th align="center">Benefits</th>
+  </tr>
+  <tr>
+    <td rowspan="3" style="vertical-align: middle; background-color: #E3F2FD; font-weight: bold; text-align: center;">
+      🧠<br>Conversational<br>AI
+    </td>
+    <td><b>Google Dialogflow CX</b></td>
+    <td>Core conversational AI platform for intent recognition, entity extraction, and dialog management</td>
+    <td>Advanced context handling, visual flow builder, multi-turn conversations</td>
+  </tr>
+  <tr>
+    <td><b>Custom NLP Models</b></td>
+    <td>Domain-specific language understanding for career terminology</td>
+    <td>Improved accuracy for specialized career terms and industry jargon</td>
+  </tr>
+  <tr>
+    <td><b>Context Management System</b></td>
+    <td>Tracks conversation history and user preferences</td>
+    <td>Enables personalized, contextually relevant responses across sessions</td>
+  </tr>
+  <tr>
+    <td rowspan="3" style="vertical-align: middle; background-color: #E8F5E9; font-weight: bold; text-align: center;">
+      🖥️<br>Frontend<br>Technologies
+    </td>
+    <td><b>React.js</b></td>
+    <td>Web interface component library</td>
+    <td>Component-based architecture, virtual DOM for performance, rich ecosystem</td>
+  </tr>
+  <tr>
+    <td><b>Progressive Web App (PWA)</b></td>
+    <td>Mobile-like experience on web platforms</td>
+    <td>Offline capabilities, installable on devices, push notifications</td>
+  </tr>
+  <tr>
+    <td><b>Material Design Components</b></td>
+    <td>UI component library</td>
+    <td>Consistent design language, accessibility features, responsive design</td>
+  </tr>
+  <tr>
+    <td rowspan="3" style="vertical-align: middle; background-color: #FFF3E0; font-weight: bold; text-align: center;">
+      ⚙️<br>Backend<br>Services
+    </td>
+    <td><b>Node.js</b></td>
+    <td>Server-side JavaScript runtime for webhook services</td>
+    <td>Asynchronous I/O, scalable architecture, extensive package ecosystem</td>
+  </tr>
+  <tr>
+    <td><b>Express.js</b></td>
+    <td>Web application framework</td>
+    <td>Middleware support, routing capabilities, HTTP utility methods</td>
+  </tr>
+  <tr>
+    <td><b>RESTful APIs</b></td>
+    <td>Integration interface for external services</td>
+    <td>Industry standard, stateless architecture, cross-platform compatibility</td>
+  </tr>
+  <tr>
+    <td rowspan="3" style="vertical-align: middle; background-color: #F3E5F5; font-weight: bold; text-align: center;">
+      ☁️<br>Cloud<br>Infrastructure
+    </td>
+    <td><b>Google Cloud Platform (GCP)</b></td>
+    <td>Primary cloud infrastructure provider</td>
+    <td>Native integration with Dialogflow, global scale, comprehensive service offerings</td>
+  </tr>
+  <tr>
+    <td><b>Cloud Functions</b></td>
+    <td>Serverless compute for webhook endpoints</td>
+    <td>Auto-scaling, event-driven, minimal maintenance</td>
+  </tr>
+  <tr>
+    <td><b>Cloud Run</b></td>
+    <td>Containerized application platform</td>
+    <td>Stateless, auto-scaling, container-based services</td>
+  </tr>
+  <tr>
+    <td rowspan="3" style="vertical-align: middle; background-color: #E8EAF6; font-weight: bold; text-align: center;">
+      💾<br>Data<br>Management
+    </td>
+    <td><b>Cloud Firestore</b></td>
+    <td>NoSQL document database for user profiles and conversation state</td>
+    <td>Real-time updates, offline support, automatic scaling</td>
+  </tr>
+  <tr>
+    <td><b>BigQuery</b></td>
+    <td>Data warehouse for analytics</td>
+    <td>Serverless architecture, ML-powered insights, petabyte-scale analysis</td>
+  </tr>
+  <tr>
+    <td><b>Cloud Storage</b></td>
+    <td>Object storage for files and resources</td>
+    <td>Globally available, highly durable, integrated with GCP services</td>
+  </tr>
+  <tr>
+    <td rowspan="3" style="vertical-align: middle; background-color: #FFEBEE; font-weight: bold; text-align: center;">
+      🔌<br>Integration<br>Layer
+    </td>
+    <td><b>API Gateway</b></td>
+    <td>Managed API frontend for backend services</td>
+    <td>Security, monitoring, throttling, developer portal capabilities</td>
+  </tr>
+  <tr>
+    <td><b>Webhook Framework</b></td>
+    <td>Handles integration between Dialogflow and external systems</td>
+    <td>Standardized request/response handling, error management, retry logic</td>
+  </tr>
+  <tr>
+    <td><b>OAuth 2.0</b></td>
+    <td>Authentication protocol for secure API access</td>
+    <td>Industry standard, token-based security, third-party authorization</td>
+  </tr>
+  <tr>
+    <td rowspan="3" style="vertical-align: middle; background-color: #E0F2F1; font-weight: bold; text-align: center;">
+      🔄<br>DevOps &<br>Monitoring
+    </td>
+    <td><b>Cloud Build</b></td>
+    <td>CI/CD pipeline automation</td>
+    <td>Serverless builds, integration with GCP services, customizable workflows</td>
+  </tr>
+  <tr>
+    <td><b>Cloud Monitoring</b></td>
+    <td>System performance monitoring</td>
+    <td>Real-time metrics, customizable dashboards, alerting capabilities</td>
+  </tr>
+  <tr>
+    <td><b>Cloud Logging</b></td>
+    <td>Centralized logging service</td>
+    <td>Structured logging, search and analysis tools, long-term retention</td>
+  </tr>
+  <tr>
+    <td rowspan="3" style="vertical-align: middle; background-color: #ECEFF1; font-weight: bold; text-align: center;">
+      🔒<br>Security &<br>Compliance
+    </td>
+    <td><b>Cloud IAM</b></td>
+    <td>Identity and access management</td>
+    <td>Fine-grained access control, audit logging, principle of least privilege</td>
+  </tr>
+  <tr>
+    <td><b>Secret Manager</b></td>
+    <td>Secure storage for API keys and credentials</td>
+    <td>Centralized secret management, versioning, access control</td>
+  </tr>
+  <tr>
+    <td><b>Cloud Armor</b></td>
+    <td>Web application firewall</td>
+    <td>DDoS protection, L7 attack prevention, IP-based access control</td>
+  </tr>
+</table>
+
+### 📱 Client-Side Technologies
+
+<div align="center">
+
+```mermaid
+flowchart LR
+    classDef web fill:#E3F2FD,stroke:#1976D2,color:#0D47A1,stroke-width:2px
+    classDef mobile fill:#E8F5E9,stroke:#388E3C,color:#1B5E20,stroke-width:2px
+    classDef messaging fill:#FFF3E0,stroke:#F57C00,color:#E65100,stroke-width:2px
+    
+    A[Client Access<br>Options] --> B[Web Interface]:::web
+    A --> C[Mobile Experience]:::mobile
+    A --> D[Messaging Platforms]:::messaging
+    
+    B --> B1[React.js]:::web
+    B --> B2[PWA Capabilities]:::web
+    B --> B3[Material Design]:::web
+    
+    C --> C1[Responsive Web]:::mobile
+    C --> C2[Native App Wrapper]:::mobile
+    C --> C3[Mobile Optimized UI]:::mobile
+    
+    D --> D1[WhatsApp Integration]:::messaging
+    D --> D2[Telegram Bot]:::messaging
+    D --> D3[Facebook Messenger]:::messaging
+```
+
+</div>
+
+### ⚙️ Server-Side Technologies
+
+<div align="center">
+
+```mermaid
+graph TD
+    classDef nlp fill:#E1F5FE,stroke:#0288D1,color:#01579B,stroke-width:2px
+    classDef compute fill:#F3E5F5,stroke:#9C27B0,color:#4A148C,stroke-width:2px
+    classDef data fill:#FAFAFA,stroke:#424242,color:#212121,stroke-width:2px
+    classDef integration fill:#E8F5E9,stroke:#4CAF50,color:#1B5E20,stroke-width:2px
+    
+    A[Conversational Core] --> B[Dialogflow CX]:::nlp
+    A --> C[Custom NLP Models]:::nlp
+    A --> D[Context Management]:::nlp
+    
+    E[Cloud Services] --> F[Cloud Functions]:::compute
+    E --> G[Cloud Run]:::compute
+    E --> H[App Engine]:::compute
+    
+    I[Data Stores] --> J[Cloud Firestore]:::data
+    I --> K[BigQuery]:::data
+    I --> L[Redis Cache]:::data
+    
+    M[External Integrations] --> N[JobsForHer API]:::integration
+    M --> O[Event Platforms]:::integration
+    M --> P[Learning Resources]:::integration
+    
+    A -.-> E
+    E -.-> I
+    E -.-> M
+```
+
+</div>
+
+### 🌟 Technology Selection Rationale
+
+#### 🔹 Why Google Cloud & Dialogflow CX?
+
+- **Platform Integration**: Native compatibility between Dialogflow CX and other Google Cloud services
+- **Advanced Flow Management**: Superior state tracking and conversation management compared to alternatives
+- **ML Capabilities**: Pre-trained models with ability to customize for career domain specifics
+- **Serverless Focus**: Minimal infrastructure management with auto-scaling capabilities
+- **Global Availability**: Low-latency access worldwide for diverse user base
+
+#### 🔹 Why React & Progressive Web Apps?
+
+- **Accessibility**: Enables access across devices without requiring app installation
+- **Development Efficiency**: Component reusability and rich ecosystem accelerate development
+- **Performance**: Virtual DOM and optimized rendering for smooth conversation experience
+- **Cross-Platform**: Single codebase serving web and mobile-web experiences
+- **Offline Capabilities**: Service workers enable continued functionality in unstable networks
+
+#### 🔹 Deployment Approach
+
+<div align="center">
+
+```mermaid
+gantt
+    title Technology Implementation Timeline
+    dateFormat YYYY-MM-DD
+    
+    section Conversational AI
+    Configure Dialogflow CX       :a1, 2025-01-15, 30d
+    Train NLU Models              :a2, 2025-02-01, 45d
+    Implement Context Management  :a3, after a2, 30d
+    
+    section Frontend Development
+    Design UI/UX                  :b1, 2025-01-15, 30d
+    Develop React Components      :b2, after b1, 45d
+    PWA Implementation            :b3, after b2, 15d
+    
+    section Backend Services
+    Set Up GCP Environment        :c1, 2025-01-20, 15d
+    Develop Node.js Webhooks      :c2, 2025-02-01, 40d
+    Implement API Integrations    :c3, after c2, 30d
+    
+    section Data & Infrastructure
+    Database Schema Design        :d1, 2025-01-15, 20d
+    Set Up Firestore              :d2, after d1, 10d
+    Analytics Infrastructure      :d3, 2025-03-15, 30d
+    
+    section Security & DevOps
+    IAM Configuration             :e1, 2025-01-20, 15d
+    CI/CD Pipeline Setup          :e2, 2025-02-10, 20d
+    Security Testing              :e3, 2025-04-01, 20d
+```
+
+</div>
+
 ## 🏗️ Architecture Diagram of the Proposed Solution
 
 <div align="center">
