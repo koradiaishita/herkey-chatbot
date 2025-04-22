@@ -21,6 +21,12 @@ The following diagram illustrates the complete conversation process flow from us
 
 ```mermaid
 flowchart TD
+    %% Google Brand Colors
+    classDef googleBlue fill:#4285F4,color:white,stroke:none
+    classDef googleRed fill:#EA4335,color:white,stroke:none
+    classDef googleYellow fill:#FBBC05,color:#333,stroke:none
+    classDef googleGreen fill:#34A853,color:white,stroke:none
+
     A[User Initiates Conversation] -->|Enters text/voice| B[Input Processing]
     B -->|Preprocess text| C[Intent Recognition]
     C -->|Determine user intent| D{Intent Identified?}
@@ -35,6 +41,12 @@ flowchart TD
     J -->|Generate response| K[Response Delivery]
     K -->|Present to user| L[User Views Response]
     L -->|Continues conversation| A
+
+    %% Apply Google Brand Colors
+    class A,E,J,L googleBlue
+    class B,F,K googleRed
+    class C,G,I googleGreen
+    class D,H googleYellow
 ```
 
 ## 🔀 Sequence Diagram
@@ -43,14 +55,15 @@ This sequence diagram shows the interaction between different components during 
 
 ```mermaid
 sequenceDiagram
-    participant User
-    participant UI as Web Interface
-    participant Agent as Agent Controller
-    participant Intent as Intent Recognizer
-    participant Flow as Flow Manager
-    participant Entity as Entity Extractor
-    participant Webhook as External Services
-    participant Response as Response Generator
+    %% Google Brand Colors
+    participant User as User 
+    participant UI as Web Interface #4285F4
+    participant Agent as Agent Controller #EA4335
+    participant Intent as Intent Recognizer #FBBC05
+    participant Flow as Flow Manager #34A853
+    participant Entity as Entity Extractor #4285F4
+    participant Webhook as External Services #EA4335
+    participant Response as Response Generator #FBBC05
 
     User->>UI: Initiates conversation
     UI->>Agent: Forwards user input
@@ -81,11 +94,24 @@ sequenceDiagram
 
 ```mermaid
 graph TD
+    %% Google Brand Colors
+    classDef googleBlue fill:#4285F4,color:white,stroke:none
+    classDef googleRed fill:#EA4335,color:white,stroke:none
+    classDef googleYellow fill:#FBBC05,color:#333,stroke:none
+    classDef googleGreen fill:#34A853,color:white,stroke:none
+
     A[User Input] --> B[Intent Recognition]
     B --> C[Conversation Flow]
     C --> D[Response Generation]
     D --> E[User Interface]
     E --> A
+    
+    %% Apply Google Brand Colors
+    class A googleBlue
+    class B googleRed
+    class C googleYellow
+    class D googleGreen
+    class E googleBlue
 ```
 
 ### 🧠 Core Components
@@ -151,6 +177,12 @@ Helps users discover their career interests through:
 
 ```mermaid
 flowchart TD
+    %% Google Brand Colors
+    classDef googleBlue fill:#4285F4,color:white,stroke:none
+    classDef googleRed fill:#EA4335,color:white,stroke:none
+    classDef googleYellow fill:#FBBC05,color:#333,stroke:none
+    classDef googleGreen fill:#34A853,color:white,stroke:none
+
     A[Dialogflow CX Agent] --- B[NLU Engine]
     A --- C[Flow Management]
     A --- D[Context Handler]
@@ -166,6 +198,13 @@ flowchart TD
     F --- K[External APIs]
     F --- L[Database Services]
     F --- M[Authentication Services]
+
+    %% Apply Google Brand Colors
+    class A googleBlue
+    class B,G,H googleRed
+    class C,I,J googleYellow
+    class D,E googleGreen
+    class F,K,L,M googleBlue
 ```
 
 ### 🧪 Technical Specifications
@@ -202,10 +241,11 @@ The Natural Language Understanding (NLU) engine implements:
 
 ```mermaid
 sequenceDiagram
-    participant DF as Dialogflow CX
-    participant WH as Webhook Service
-    participant API as External APIs
-    participant DB as Databases
+    %% Google Brand Colors
+    participant DF as Dialogflow CX #4285F4
+    participant WH as Webhook Service #EA4335
+    participant API as External APIs #FBBC05
+    participant DB as Databases #34A853
     
     DF->>WH: HTTP Request with Parameters
     activate WH
@@ -307,6 +347,12 @@ herkey-chatbot/
 
 ```mermaid
 flowchart LR
+    %% Google Brand Colors
+    classDef googleBlue fill:#4285F4,color:white,stroke:none
+    classDef googleRed fill:#EA4335,color:white,stroke:none
+    classDef googleYellow fill:#FBBC05,color:#333,stroke:none
+    classDef googleGreen fill:#34A853,color:white,stroke:none
+
     A[Dialogflow CX Project] --> B[Google Cloud Platform]
     B --> C[Dialog Agent]
     B --> D[Cloud Functions]
@@ -320,7 +366,25 @@ flowchart LR
     
     F --> J[User Web Browser]
     G --> K[User Mobile App]
+    
+    %% Apply Google Brand Colors
+    class A,B googleBlue
+    class C,F,G googleRed
+    class D,H googleYellow
+    class E,I googleGreen
+    class J,K googleBlue
 ```
+
+### 🌈 Google Brand Color Palette
+
+The diagrams utilize Google's official brand colors to maintain consistent visual identity with Dialogflow CX:
+
+| Color | Hex Code | Usage |
+|-------|----------|-------|
+| ![Blue](https://via.placeholder.com/15/4285F4/000000?text=+) Blue | #4285F4 | Primary user interactions, interfaces |
+| ![Red](https://via.placeholder.com/15/EA4335/000000?text=+) Red | #EA4335 | Core processing components |
+| ![Yellow](https://via.placeholder.com/15/FBBC05/000000?text=+) Yellow | #FBBC05 | Decision points, flow control |
+| ![Green](https://via.placeholder.com/15/34A853/000000?text=+) Green | #34A853 | Data storage, successful operations |
 
 ### 🔧 Deployment Process
 
