@@ -15,6 +15,68 @@ Herkey Chatbot (officially named **Asha_AI_Chatbot**) is a conversational AI ass
 | 👥 Community | Facilitates joining professional communities | JOIN_COMMUNITY flow |
 | 📚 Learning Resources | Provides educational content and materials | LEARNING_RESOURCES flow |
 
+## 🔄 Process Flow Diagram
+
+The following diagram illustrates the complete conversation process flow from user input to response delivery:
+
+```mermaid
+flowchart TD
+    A[User Initiates Conversation] -->|Enters text/voice| B[Input Processing]
+    B -->|Preprocess text| C[Intent Recognition]
+    C -->|Determine user intent| D{Intent Identified?}
+    D -->|Yes| E[Select Conversation Flow]
+    D -->|No| F[Fallback Response]
+    F -->|Prompt clarification| B
+    E -->|Load appropriate flow| G[Parameter Extraction]
+    G -->|Extract entities| H{External Data Needed?}
+    H -->|Yes| I[Call External APIs]
+    I -->|Fetch data| J[Response Generation]
+    H -->|No| J
+    J -->|Generate response| K[Response Delivery]
+    K -->|Present to user| L[User Views Response]
+    L -->|Continues conversation| A
+```
+
+## 🔀 Sequence Diagram
+
+This sequence diagram shows the interaction between different components during a typical conversation:
+
+```mermaid
+sequenceDiagram
+    participant User
+    participant UI as Web Interface
+    participant Agent as Agent Controller
+    participant Intent as Intent Recognizer
+    participant Flow as Flow Manager
+    participant Entity as Entity Extractor
+    participant Webhook as External Services
+    participant Response as Response Generator
+
+    User->>UI: Initiates conversation
+    UI->>Agent: Forwards user input
+    Agent->>Intent: Requests intent classification
+    Intent->>Agent: Returns identified intent
+    Agent->>Flow: Selects appropriate flow
+    Flow->>Entity: Extracts parameters/entities
+    
+    alt External data required
+        Flow->>Webhook: Calls external service
+        Webhook->>Webhook: Processes request
+        Webhook->>Flow: Returns data
+    end
+    
+    Flow->>Response: Requests response generation
+    Response->>Flow: Returns formatted response
+    Flow->>Agent: Provides complete response
+    Agent->>UI: Delivers response
+    UI->>User: Displays response with interaction options
+    
+    alt User continues conversation
+        User->>UI: Provides follow-up input
+        Note over User,Response: Process repeats
+    end
+```
+
 ## 🏗️ Technical Architecture
 
 ```mermaid
