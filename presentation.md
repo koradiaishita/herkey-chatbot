@@ -325,6 +325,244 @@ journey
 - 📊 **Analytics**: Performance tracking and interaction measurement
 - 📱 **Multi-Channel Support**: Web, mobile, and messaging platform availability
 
+## 📊 Detailed Process Flow Diagram
+
+<div align="center">
+
+### 🔄 End-to-End Conversation Processing
+
+```mermaid
+flowchart TD
+    %% Google Brand Colors
+    classDef googleBlue fill:#4285F4,color:white,stroke:none
+    classDef googleRed fill:#EA4335,color:white,stroke:none
+    classDef googleYellow fill:#FBBC05,color:#333,stroke:none
+    classDef googleGreen fill:#34A853,color:white,stroke:none
+    classDef userAction fill:#E1F5FE,stroke:#0288D1,color:#01579B
+    classDef systemProcess fill:#F3E5F5,stroke:#7B1FA2,color:#4A148C
+    
+    %% User Interaction
+    U1[User initiates conversation]:::userAction
+    U2[User provides query or selects option]:::userAction
+    U3[User views response]:::userAction
+    U4[User refines query or provides feedback]:::userAction
+    
+    %% Input Processing
+    I1[Text/voice input captured]:::googleBlue
+    I2[Input preprocessing]:::googleBlue
+    I3[Language detection]:::googleBlue
+    
+    %% NLU Processing
+    N1[Intent classification]:::googleRed
+    N2[Entity extraction]:::googleRed
+    N3[Context determination]:::googleRed
+    N4[Parameter validation]:::googleRed
+    
+    %% Dialog Management
+    D1[Flow selection]:::googleYellow
+    D2[State determination]:::googleYellow
+    D3[History tracking]:::googleYellow
+    D4[Next step prediction]:::googleYellow
+    
+    %% External Services
+    E1[Job database query]:::googleGreen
+    E2[Community API integration]:::googleGreen
+    E3[Learning resources fetch]:::googleGreen
+    E4[Event information retrieval]:::googleGreen
+    
+    %% Response Generation
+    R1[Template selection]:::googleRed
+    R2[Dynamic content insertion]:::googleRed
+    R3[Personalization application]:::googleRed
+    R4[Response formatting]:::googleRed
+    
+    %% Output Delivery
+    O1[Response delivery]:::googleBlue
+    O2[Interaction options generation]:::googleBlue
+    O3[Feedback capture]:::googleBlue
+    
+    %% System Learning
+    S1[Interaction logging]:::systemProcess
+    S2[Performance analytics]:::systemProcess
+    S3[Model improvement]:::systemProcess
+    
+    %% Flow Connections
+    U1 --> I1
+    I1 --> I2 --> I3 --> N1
+    
+    N1 --> N2 --> N3 --> N4 --> D1
+    
+    D1 --> D2 --> D3 --> D4
+    
+    D4 --> |Job Search| E1
+    D4 --> |Community| E2
+    D4 --> |Learning| E3
+    D4 --> |Events| E4
+    
+    E1 & E2 & E3 & E4 --> R1
+    
+    R1 --> R2 --> R3 --> R4 --> O1
+    
+    O1 --> O2 --> O3 --> U3
+    
+    U3 --> U4 --> I1
+    
+    O3 --> S1 --> S2 --> S3 --> |Model Update| N1
+    
+    %% Subgraphs for visual grouping
+    subgraph User Actions
+        U1
+        U2
+        U3
+        U4
+    end
+    
+    subgraph Input Processing
+        I1
+        I2
+        I3
+    end
+    
+    subgraph NLU Engine
+        N1
+        N2
+        N3
+        N4
+    end
+    
+    subgraph Dialog Management
+        D1
+        D2
+        D3
+        D4
+    end
+    
+    subgraph External Services
+        E1
+        E2
+        E3
+        E4
+    end
+    
+    subgraph Response Generation
+        R1
+        R2
+        R3
+        R4
+    end
+    
+    subgraph Output Delivery
+        O1
+        O2
+        O3
+    end
+    
+    subgraph System Learning
+        S1
+        S2
+        S3
+    end
+```
+
+</div>
+
+## 👥 Use-Case Diagram
+
+<div align="center">
+
+### 🔍 User Interactions & System Functions
+
+```mermaid
+graph LR
+    %% Define styles using Google colors
+    classDef actor fill:#E8F5E9,stroke:#4CAF50,stroke-width:2px,color:#1B5E20
+    classDef usecase fill:#E3F2FD,stroke:#2196F3,stroke-width:2px,color:#0D47A1
+    classDef system fill:#FAFAFA,stroke:#9E9E9E,stroke-width:2px,color:#212121
+    classDef extension fill:#FFF3E0,stroke:#FF9800,stroke-width:2px,color:#E65100
+
+    %% Define actors
+    A1[Job Seeker]:::actor
+    A2[Career Changer]:::actor
+    A3[Mentor Seeker]:::actor
+    A4[Community Member]:::actor
+    A5[Skill Builder]:::actor
+    SYS([Asha AI Chatbot<br>System]):::system
+    
+    %% Define use cases
+    UC1([Search for Jobs]):::usecase
+    UC2([Discover Career Events]):::usecase
+    UC3([Connect with Mentors]):::usecase
+    UC4([Join Communities]):::usecase
+    UC5([Access Learning Resources]):::usecase
+    UC6([Explore Career Paths]):::usecase
+    UC7([Build Professional Skills]):::usecase
+    UC8([Prepare for Interviews]):::usecase
+    
+    %% Define extensions
+    EX1([Personalize Recommendations]):::extension
+    EX2([Track Progress]):::extension
+    EX3([Provide Feedback]):::extension
+    
+    %% Define relationships
+    A1 --- UC1
+    A1 --- UC2
+    A1 --- UC8
+    
+    A2 --- UC3
+    A2 --- UC5
+    A2 --- UC6
+    
+    A3 --- UC3
+    A3 --- UC4
+    
+    A4 --- UC2
+    A4 --- UC4
+    
+    A5 --- UC5
+    A5 --- UC7
+    
+    SYS --- UC1
+    SYS --- UC2
+    SYS --- UC3
+    SYS --- UC4
+    SYS --- UC5
+    SYS --- UC6
+    SYS --- UC7
+    SYS --- UC8
+    
+    UC1 -.- EX1
+    UC2 -.- EX1
+    UC3 -.- EX1
+    UC5 -.- EX1
+    
+    UC5 -.- EX2
+    UC6 -.- EX2
+    UC7 -.- EX2
+    
+    UC1 -.- EX3
+    UC3 -.- EX3
+    UC5 -.- EX3
+    
+    %% Add labels
+    linkStyle 0,1,2 stroke:#4CAF50,stroke-width:2px
+    linkStyle 3,4,5 stroke:#FF5722,stroke-width:2px
+    linkStyle 6,7 stroke:#9C27B0,stroke-width:2px
+    linkStyle 8,9 stroke:#00BCD4,stroke-width:2px
+    linkStyle 10,11 stroke:#FFC107,stroke-width:2px
+```
+
+</div>
+
+### 🔍 Key User Interactions
+
+| Actor | Primary Use Cases | Value Received |
+|-------|------------------|----------------|
+| 👩‍💼 **Job Seeker** | Search for Jobs, Interview Preparation | Targeted job matches & application success |
+| 🔄 **Career Changer** | Explore Career Paths, Connect with Mentors | Guidance for successful industry transition |
+| 👥 **Mentor Seeker** | Connect with Mentors, Join Communities | Professional guidance & support network |
+| 🌐 **Community Member** | Join Communities, Discover Events | Networking opportunities & peer connections |
+| 📚 **Skill Builder** | Access Learning Resources, Build Skills | Targeted skill development paths |
+
 ### 🌟 Key Features
 
 | Feature | Description | Implementation |
