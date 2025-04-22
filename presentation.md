@@ -40,6 +40,239 @@
 - 🔶 **Inclusion Driver**: Democratizes career guidance that was previously available only through expensive coaching
 - 🔶 **Success Accelerator**: Serves as a catalyst for women's professional advancement through informed decision-making
 
+## 🏗️ Architecture Diagram of the Proposed Solution
+
+<div align="center">
+
+```mermaid
+flowchart TD
+    %% Define styles using Google colors
+    classDef userLayer fill:#E1F5FE,stroke:#0288D1,color:#01579B,stroke-width:2px
+    classDef presentationLayer fill:#E8F5E9,stroke:#4CAF50,color:#1B5E20,stroke-width:2px
+    classDef applicationLayer fill:#FFF3E0,stroke:#FF9800,color:#E65100,stroke-width:2px
+    classDef infrastructureLayer fill:#F3E5F5,stroke:#9C27B0,color:#4A148C,stroke-width:2px
+    classDef integrationLayer fill:#FFEBEE,stroke:#F44336,color:#B71C1C,stroke-width:2px
+    classDef dataLayer fill:#E8EAF6,stroke:#3F51B5,color:#1A237E,stroke-width:2px
+    classDef securityLayer fill:#ECEFF1,stroke:#607D8B,color:#263238,stroke-width:1px,stroke-dasharray: 5 5
+    
+    %% User Layer
+    U[Web/Mobile<br>User Interface]:::userLayer
+    
+    %% Presentation Layer
+    P1[Responsive Web<br>Interface]:::presentationLayer
+    P2[Mobile Integration<br>Layer]:::presentationLayer
+    P3[Messaging Platform<br>Connectors]:::presentationLayer
+    
+    %% Application Layer - DialogFlow CX Components
+    A1[Dialogflow CX<br>Agent]:::applicationLayer
+    A2[NLU Engine]:::applicationLayer
+    A3[Context Management]:::applicationLayer
+    A4[Flow Controller]:::applicationLayer
+    A5[Entity Extraction]:::applicationLayer
+    A6[Response Generator]:::applicationLayer
+    
+    %% Integration Layer
+    I1[Webhook Gateway]:::integrationLayer
+    I2[API Integration<br>Services]:::integrationLayer
+    I3[Authentication<br>Service]:::integrationLayer
+    I4[Event Processing<br>Engine]:::integrationLayer
+    
+    %% Infrastructure Layer
+    IF1[Google Cloud<br>Platform]:::infrastructureLayer
+    IF2[Serverless<br>Functions]:::infrastructureLayer
+    IF3[Monitoring &<br>Logging]:::infrastructureLayer
+    IF4[CI/CD Pipeline]:::infrastructureLayer
+    
+    %% Data Layer
+    D1[User Profile<br>Storage]:::dataLayer
+    D2[Conversation<br>History DB]:::dataLayer
+    D3[Analytics<br>Warehouse]:::dataLayer
+    D4[Knowledge<br>Base]:::dataLayer
+    
+    %% External Integrations
+    E1[JobsForHer<br>API]:::integrationLayer
+    E2[Event Management<br>Systems]:::integrationLayer
+    E3[Learning Resource<br>Platforms]:::integrationLayer
+    E4[Community<br>Platforms]:::integrationLayer
+    
+    %% Security Components (surrounding everything)
+    S1[Authentication &<br>Authorization]:::securityLayer
+    S2[Data Encryption]:::securityLayer
+    S3[Security Monitoring]:::securityLayer
+    S4[Compliance<br>Controls]:::securityLayer
+    
+    %% Connections - User to Presentation
+    U --> P1
+    U --> P2
+    U --> P3
+    
+    %% Connections - Presentation to Application
+    P1 & P2 & P3 --> A1
+    
+    %% Connections - Application Components
+    A1 --> A2
+    A1 --> A3
+    A1 --> A4
+    A2 <--> A5
+    A3 <--> A4
+    A4 --> A6
+    
+    %% Connections - Application to Integration
+    A4 --> I1
+    I1 --> I2
+    I1 --> I3
+    I1 --> I4
+    
+    %% Connections - Integration to External
+    I2 --> E1
+    I2 --> E2
+    I2 --> E3
+    I2 --> E4
+    
+    %% Connections - Data Layer
+    I2 <--> D1
+    I2 <--> D2
+    I4 --> D3
+    A2 & A6 <--> D4
+    
+    %% Connections - Infrastructure
+    subgraph Infrastructure
+        IF1
+        IF2
+        IF3
+        IF4
+    end
+    
+    I1 & I2 & I3 & I4 -.-> IF1
+    I1 & I2 & I3 & I4 -.-> IF2
+    
+    %% Security Layer (conceptual)
+    subgraph Security[Security & Compliance Layer]
+        S1
+        S2
+        S3
+        S4
+    end
+```
+
+</div>
+
+### 🔍 Architecture Layers
+
+<table>
+  <tr>
+    <th colspan="2" align="center">🌟 Multi-Tier Architecture Components 🌟</th>
+  </tr>
+  <tr>
+    <td width="28%" style="vertical-align: top; background-color: #E1F5FE; border-left: 4px solid #0288D1;">
+      <h4>🖥️ User Layer</h4>
+      <ul>
+        <li>Web browser interface</li>
+        <li>Mobile applications</li>
+        <li>Messaging platforms</li>
+      </ul>
+    </td>
+    <td width="72%" style="vertical-align: top; border-left: 1px solid #ddd;">
+      The access points where users interact with Asha AI through responsive interfaces optimized for different devices and platforms. Provides a seamless, device-agnostic experience with consistent UI/UX.
+    </td>
+  </tr>
+  <tr>
+    <td width="28%" style="vertical-align: top; background-color: #E8F5E9; border-left: 4px solid #4CAF50;">
+      <h4>🎨 Presentation Layer</h4>
+      <ul>
+        <li>Responsive web interface</li>
+        <li>Mobile integration adapters</li>
+        <li>Platform-specific connectors</li>
+      </ul>
+    </td>
+    <td width="72%" style="vertical-align: top; border-left: 1px solid #ddd;">
+      Handles presentation logic and ensures consistent user experience across all platforms. Manages UI components, quick-reply chips, resource cards, and conversation displays while adapting to device capabilities.
+    </td>
+  </tr>
+  <tr>
+    <td width="28%" style="vertical-align: top; background-color: #FFF3E0; border-left: 4px solid #FF9800;">
+      <h4>🧠 Application Layer</h4>
+      <ul>
+        <li>Dialogflow CX agent</li>
+        <li>NLU engine</li>
+        <li>Context management</li>
+        <li>Flow controller</li>
+        <li>Entity extraction</li>
+        <li>Response generator</li>
+      </ul>
+    </td>
+    <td width="72%" style="vertical-align: top; border-left: 1px solid #ddd;">
+      Core conversational AI components that power Asha's intelligent interactions. Processes natural language, identifies user intents, maintains conversation context, navigates flows, extracts parameters, and generates personalized responses using Google's Dialogflow CX platform.
+    </td>
+  </tr>
+  <tr>
+    <td width="28%" style="vertical-align: top; background-color: #FFEBEE; border-left: 4px solid #F44336;">
+      <h4>🔌 Integration Layer</h4>
+      <ul>
+        <li>Webhook gateway</li>
+        <li>API integration services</li>
+        <li>Authentication service</li>
+        <li>Event processing engine</li>
+      </ul>
+    </td>
+    <td width="72%" style="vertical-align: top; border-left: 1px solid #ddd;">
+      Connects Asha AI with external systems and services through secure APIs. Manages data exchange with JobsForHer platform, event systems, learning resources, and community platforms. Handles authentication, request transformation, and response formatting.
+    </td>
+  </tr>
+  <tr>
+    <td width="28%" style="vertical-align: top; background-color: #F3E5F5; border-left: 4px solid #9C27B0;">
+      <h4>☁️ Infrastructure Layer</h4>
+      <ul>
+        <li>Google Cloud Platform</li>
+        <li>Serverless functions</li>
+        <li>Monitoring & logging</li>
+        <li>CI/CD pipeline</li>
+      </ul>
+    </td>
+    <td width="72%" style="vertical-align: top; border-left: 1px solid #ddd;">
+      Underlying cloud infrastructure providing scalable, reliable foundation for the Asha AI system. Leverages Google Cloud for hosting, serverless Cloud Functions for webhook integration, comprehensive monitoring, and automated deployment pipelines for continuous improvement.
+    </td>
+  </tr>
+  <tr>
+    <td width="28%" style="vertical-align: top; background-color: #E8EAF6; border-left: 4px solid #3F51B5;">
+      <h4>💾 Data Layer</h4>
+      <ul>
+        <li>User profile storage</li>
+        <li>Conversation history DB</li>
+        <li>Analytics warehouse</li>
+        <li>Knowledge base</li>
+      </ul>
+    </td>
+    <td width="72%" style="vertical-align: top; border-left: 1px solid #ddd;">
+      Manages persistent storage of user data, conversation history, analytics, and knowledge resources. Enables personalization through user profiles, supports contextual conversations with history tracking, drives improvements with analytics, and powers responses with curated knowledge.
+    </td>
+  </tr>
+  <tr>
+    <td width="28%" style="vertical-align: top; background-color: #ECEFF1; border-left: 4px solid #607D8B;">
+      <h4>🔒 Security Layer</h4>
+      <ul>
+        <li>Authentication & authorization</li>
+        <li>Data encryption</li>
+        <li>Security monitoring</li>
+        <li>Compliance controls</li>
+      </ul>
+    </td>
+    <td width="72%" style="vertical-align: top; border-left: 1px solid #ddd;">
+      Cross-cutting security measures protecting all system layers. Ensures secure user authentication, data encryption in transit and at rest, real-time security monitoring, and compliance with data protection regulations for user privacy and system integrity.
+    </td>
+  </tr>
+</table>
+
+### 💡 Key Technical Features
+
+- 🔹 **Cloud-Native Architecture**: Scalable, resilient design leveraging Google Cloud Platform
+- 🔹 **Conversational AI Core**: Powered by Google's Dialogflow CX for advanced NLU capabilities
+- 🔹 **Serverless Integration**: Cloud Functions for lightweight, event-driven API connections
+- 🔹 **Secure Data Management**: Encrypted storage with role-based access controls
+- 🔹 **Extensible Design**: Modular components allowing rapid feature additions
+- 🔹 **Multi-Channel Support**: Single backend serving web, mobile, and messaging interfaces
+- 🔹 **Analytics-Driven Improvement**: Continuous enhancement through interaction analysis
+
 ## 🌈 Opportunities
 
 ### ✨ How Asha AI Differentiates from Existing Solutions
