@@ -145,34 +145,209 @@ Helps users discover their career interests through:
 2. Skills evaluation
 3. Career path recommendations
 
-## 🛠️ Technical Implementation
+## 🛠️ Technical Implementation Details
 
-- Built on Dialogflow CX framework
-- Advanced NLU (Natural Language Understanding) model
-- Classification threshold: 0.3 (30%)
-- Speech-to-text capabilities configured
-- Web client integration ready
+### 🔌 Dialogflow CX Framework Architecture
+
+```mermaid
+flowchart TD
+    A[Dialogflow CX Agent] --- B[NLU Engine]
+    A --- C[Flow Management]
+    A --- D[Context Handler]
+    A --- E[Parameter Store]
+    A --- F[Webhook Gateway]
+    
+    B --- G[Intent Classifier]
+    B --- H[Entity Extractor]
+    
+    C --- I[State Tracker]
+    C --- J[Transition Router]
+    
+    F --- K[External APIs]
+    F --- L[Database Services]
+    F --- M[Authentication Services]
+```
+
+### 🧪 Technical Specifications
+
+| Component | Specification | Details |
+|-----------|---------------|---------|
+| 🔍 NLU Model | MODEL_TYPE_ADVANCED | ML-based intent classification with 30% threshold |
+| 🔄 Conversation Management | State-based | Uses Dialogflow CX states, routes, and handlers |
+| 🔊 Speech Processing | Enhanced STT | Sensitivity: 90, No-speech timeout: 5s |
+| 🌐 Web Integration | Custom UI | Interface with chip-based quick responses |
+| 📊 Logging | Stackdriver | Comprehensive interaction logging enabled |
+| 🔒 Data Compliance | DATA_RESIDENCY_IN_USE_COMPLIANT | Complies with regional data regulations |
+
+### 🧩 NLU Engine Technical Details
+
+The Natural Language Understanding (NLU) engine implements:
+
+- **Intent Classification**: 
+  - Uses ML-based model with advanced classification
+  - Threshold configured at 30% for intent matching confidence
+  - Training phrases optimized for career-related terminology
+
+- **Entity Recognition**:
+  - Extracts structured data from user utterances
+  - Maps to predefined entity types for processing
+  - Supports composite entities for complex information
+
+- **Context Management**:
+  - Maintains conversational state across interactions
+  - Handles parameter lifespan and scoping
+  - Manages slot-filling for form-based interactions
+
+### 🔗 Webhook Integration Specifications
+
+```mermaid
+sequenceDiagram
+    participant DF as Dialogflow CX
+    participant WH as Webhook Service
+    participant API as External APIs
+    participant DB as Databases
+    
+    DF->>WH: HTTP Request with Parameters
+    activate WH
+    WH->>API: API Call
+    activate API
+    API-->>WH: Response Data
+    deactivate API
+    
+    alt Data Processing Required
+        WH->>WH: Transform Data
+    end
+    
+    alt Database Operation Required
+        WH->>DB: Query/Update
+        activate DB
+        DB-->>WH: Result
+        deactivate DB
+    end
+    
+    WH-->>DF: Formatted Response
+    deactivate WH
+    DF->>DF: Update Context/Parameters
+```
+
+#### Webhook Technical Details:
+
+- **Protocol**: REST API with JSON payloads
+- **Authentication**: OAuth 2.0 for secure API communication
+- **Response Format**: Structured JSON with fulfillment messages
+- **Timeout**: Configured for 5-second maximum response time
+- **Retry Logic**: Built-in retry mechanism for failed requests
+
+### 💻 Implementation Technologies
+
+| Component | Technology | Purpose |
+|-----------|------------|---------|
+| 🧠 Conversational Engine | Dialogflow CX | Core NLU and conversation management |
+| 🌐 Frontend Integration | Web SDK | Browser-based chat interface |
+| 🔄 Backend Services | Cloud Functions | Webhook implementation for data access |
+| 📊 Analytics | Stackdriver | Interaction logging and performance metrics |
+| 🔐 Security | OAuth 2.0 | API authentication and authorization |
+
+### 📱 Integration Capabilities
+
+The chatbot can be integrated across multiple channels:
+
+- **Web**: JavaScript SDK for website embedding
+- **Mobile**: Android/iOS SDK for native app integration
+- **Messaging Platforms**: Integration with popular messaging services
+- **Voice**: IVR systems and voice assistant integration
+- **Custom APIs**: Direct API access for custom implementations
 
 ## 📂 Directory Structure
 
 ```
 herkey-chatbot/
 ├── agent.json              # Main chatbot configuration
+│   ├── displayName         # Bot name (Asha_AI_Chatbot)
+│   ├── defaultLanguageCode # Default language (en)
+│   ├── timeZone            # Time zone (Asia/Colombo)
+│   ├── speechSettings      # Speech recognition configuration
+│   └── loggingSettings     # Logging configuration
+│
 ├── entityTypes/            # Entity definitions
+│   └── [Entity Type]/      # Individual entity definitions
+│
 ├── flows/                  # Conversation flows
-│   ├── Default Start Flow/
-│   ├── FIND_EVENTS/
-│   ├── FIND_YOUR_PASSION/
-│   ├── JOB_SEARCH/
-│   ├── JOIN_COMMUNITY/
-│   ├── LEARNING_RESOURCES/
-│   └── MENTORSHIP/
+│   ├── Default Start Flow/ # Initial conversation entry
+│   │   ├── pages/          # Flow pages/states
+│   │   └── transitions/    # Flow navigation rules
+│   ├── FIND_EVENTS/        # Event discovery flow
+│   ├── FIND_YOUR_PASSION/  # Career interest exploration
+│   ├── JOB_SEARCH/         # Job search assistance
+│   ├── JOIN_COMMUNITY/     # Community joining flow
+│   ├── LEARNING_RESOURCES/ # Educational content access
+│   └── MENTORSHIP/         # Mentorship connection
+│
 ├── generativeSettings/     # AI response generation settings
+│   └── responseGeneration/ # Response generation rules
+│
 ├── generators/             # Response generators
+│   └── templates/          # Response templates
+│
 ├── intents/                # Intent definitions with training phrases
+│   ├── Default Welcome Intent/ # Initial greeting recognition
+│   │   └── trainingPhrases/    # Example user inputs
+│   ├── job_search/         # Job search intent
+│   ├── Find your passion/  # Career interest intent
+│   └── [Other Intents]/    # Additional intent definitions
+│
 ├── playbooks/              # Conversation playbooks
+│   └── mentorship/         # Mentorship conversation strategies
+│
 └── webhooks/               # External service integrations
+    └── [Service Name]/     # Individual webhook configurations
 ```
+
+## 🚀 Deployment and Infrastructure
+
+```mermaid
+flowchart LR
+    A[Dialogflow CX Project] --> B[Google Cloud Platform]
+    B --> C[Dialog Agent]
+    B --> D[Cloud Functions]
+    B --> E[API Gateway]
+    
+    C --> F[Web Integration]
+    C --> G[Mobile SDK]
+    
+    D --> H[External APIs]
+    E --> I[JobsForHer API]
+    
+    F --> J[User Web Browser]
+    G --> K[User Mobile App]
+```
+
+### 🔧 Deployment Process
+
+1. **Environment Setup**:
+   - Configure Google Cloud Project
+   - Setup Dialogflow CX agent
+   - Configure service accounts and permissions
+
+2. **Agent Deployment**:
+   - Import agent configuration from repository
+   - Configure NLU settings and thresholds
+   - Setup webhook endpoints
+
+3. **Integration Configuration**:
+   - Configure web client parameters
+   - Setup channel-specific integrations
+   - Connect external API credentials
+
+4. **Testing and Validation**:
+   - Perform intent recognition validation
+   - Test conversation flows
+   - Validate webhook functionality
+
+5. **Monitoring Setup**:
+   - Configure logging and analytics
+   - Setup alerting for critical failures
+   - Implement conversation metrics tracking
 
 ## 📈 Future Enhancement Possibilities
 
