@@ -82,7 +82,7 @@
         "initialPromptFulfillment": {
           "messages": [ {
             "text": {
-              "text": [ "#Values: What principles or causes motivate you to take action, even when it's difficult?\n" ]
+              "text": [ "What principles or causes motivate you to take action, even when it's difficult?\n" ]
             },
             "languageCode": "en"
           }, {

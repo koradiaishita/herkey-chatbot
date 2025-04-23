@@ -30,8 +30,8 @@
     "triggerFulfillment": {
     
     },
-    "name": "7a6ebdde-2d30-4bdd-a8a8-56f39a224361",
-    "targetPlaybook": "Learning Resources Playbook"
+    "targetFlow": "LEARNING RESOURCES",
+    "name": "7a6ebdde-2d30-4bdd-a8a8-56f39a224361"
   }, {
     "intent": "Find your passion",
     "triggerFulfillment": {
@@ -44,7 +44,7 @@
     "triggerFulfillment": {
     
     },
-    "name": "cc6e1ab0-0b6f-4ff7-a548-edccc9310ddc",
-    "targetPlaybook": "mentorship"
+    "targetFlow": "MENTORSHIP",
+    "name": "cc6e1ab0-0b6f-4ff7-a548-edccc9310ddc"
   } ]
 }

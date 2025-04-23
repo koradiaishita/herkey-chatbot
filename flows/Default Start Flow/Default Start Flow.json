@@ -7,7 +7,7 @@
     "triggerFulfillment": {
       "messages": [ {
         "text": {
-          "text": [ "Hi! I'm Asha, your AI career companion from JobsForHer. I'm dedicated to supporting your professional growth", "Greetings! I'm Asha from JobsForHer Foundation. I'm here to support women in their career journeys. How may I help you today?", "Welcome! I'm Asha, your virtual career assistant from JobsForHer. I'm here to help empower your professional journey.", "Hi there! I'm Asha, here to assist with your career development needs. What brings you to JobsForHer today? ", "Hello! I'm Asha, your AI assistant from JobsForHer Foundation. How can I support your professional journey today?" ]
+          "text": [ "Hi! I'm HerKey Saarthi, your AI career companion from JobsForHer. I'm dedicated to supporting your professional growth", "Greetings! I'm HerKey Saarthi from JobsForHer Foundation. I'm here to support women in their career journeys. How may I help you today?", "Welcome! I'm HerKey Saarthi , your virtual career assistant from JobsForHer. I'm here to help empower your professional journey.", "Hi there! I'm HerKey Saarthi, here to assist with your career development needs. What brings you to JobsForHer today? ", "Hello! I'm HerKey Saarthi, your AI assistant from JobsForHer Foundation. How can I support your professional journey today?" ]
         },
         "languageCode": "en"
       }, {
@@ -72,8 +72,8 @@
     "triggerFulfillment": {
     
     },
-    "name": "d8fc2d9a-f486-477c-9fe3-8145d41b6931",
-    "targetPlaybook": "Learning Resources Playbook"
+    "targetFlow": "LEARNING RESOURCES",
+    "name": "d8fc2d9a-f486-477c-9fe3-8145d41b6931"
   }, {
     "intent": "Find your passion",
     "triggerFulfillment": {
@@ -86,8 +86,8 @@
     "triggerFulfillment": {
     
     },
-    "name": "fd4c55ea-bc92-4154-b234-2ad2923fbb7b",
-    "targetPlaybook": "mentorship"
+    "targetFlow": "MENTORSHIP",
+    "name": "fd4c55ea-bc92-4154-b234-2ad2923fbb7b"
   } ],
   "eventHandlers": [ {
     "event": "sys.no-match-default",

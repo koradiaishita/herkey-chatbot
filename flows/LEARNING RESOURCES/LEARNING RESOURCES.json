@@ -1,13 +1,13 @@
 {
-  "name": "1f21c5b0-dfb2-4cfc-b426-fcc048772947",
-  "displayName": "MENTORSHIP",
+  "name": "ec83e714-325a-4716-823f-f20e49fb64a8",
+  "displayName": "LEARNING RESOURCES",
   "transitionRoutes": [ {
     "condition": "True",
     "triggerFulfillment": {
     
     },
-    "name": "ef4ec6ae-b820-44f0-a74e-21790551051c",
-    "targetPlaybook": "Mentorship Playbook"
+    "name": "73f69585-b503-491b-bb12-2daf9165cc76",
+    "targetPlaybook": "Learning Resources Playbook"
   } ],
   "eventHandlers": [ {
     "event": "sys.no-match-default",
@@ -19,7 +19,7 @@
         "languageCode": "en"
       } ]
     },
-    "name": "e7dbb321-207c-4347-8680-c128ca7b7c09"
+    "name": "e7bf73f2-8906-4f36-a794-7823381cc62f"
   }, {
     "event": "sys.no-input-default",
     "triggerFulfillment": {
@@ -30,7 +30,7 @@
         "languageCode": "en"
       } ]
     },
-    "name": "42f23a26-c67b-4d29-9e41-6f531e22a38a"
+    "name": "eda18ae0-f39c-467c-95ee-24027f17a135"
   } ],
   "nluSettings": {
     "modelType": "MODEL_TYPE_ADVANCED",
@@ -39,7 +39,7 @@
   "nluSettingsList": [ {
     "modelType": "MODEL_TYPE_ADVANCED",
     "classificationThreshold": 0.30000001,
-    "customConfigKey": "672bf9af-750e-4cd6-b440-cf975affae0d",
+    "customConfigKey": "7a35ab6b-e725-44ca-a89b-05a446290a25",
     "languageCode": "en"
   } ]
 }

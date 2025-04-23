@@ -40,9 +40,32 @@
   "transitionRoutes": [ {
     "condition": "True",
     "triggerFulfillment": {
-    
+      "setParameterActions": [ {
+        "parameter": "energy",
+        "value": null
+      }, {
+        "parameter": "legacy",
+        "value": null
+      }, {
+        "parameter": "interests",
+        "value": null
+      }, {
+        "parameter": "skills",
+        "value": null
+      }, {
+        "parameter": "values",
+        "value": null
+      } ],
+      "advancedSettings": {
+        "playbackInterruptionSettings": {
+        
+        },
+        "dtmfSettings": {
+          "useSystemEntityRule": false
+        }
+      }
     },
-    "targetPage": "End Session",
+    "targetFlow": "ANYTHING ELSE",
     "name": "5c44e297-8594-44d9-8e1c-904859356f2e"
   } ]
 }

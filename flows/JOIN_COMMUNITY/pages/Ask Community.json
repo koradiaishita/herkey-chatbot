@@ -4,6 +4,34 @@
   "form": {
   
   },
+  "entryFulfillment": {
+    "messages": [ {
+      "text": {
+        "text": [ "Hello! We're excited that you're considering joining our community. Here's why becoming a member could be a great decision" ]
+      },
+      "languageCode": "en"
+    }, {
+      "payload": {
+        "richContent": [ [ {
+          "options": [ {
+            "text": "Trending Community"
+          }, {
+            "text": "Most Active Community"
+          } ],
+          "type": "chips"
+        } ] ]
+      },
+      "languageCode": "en"
+    } ],
+    "advancedSettings": {
+      "playbackInterruptionSettings": {
+      
+      },
+      "dtmfSettings": {
+        "useSystemEntityRule": false
+      }
+    }
+  },
   "transitionRoutes": [ {
     "intent": "Trading Community",
     "triggerFulfillment": {
@@ -11,7 +39,7 @@
         "payload": {
           "richContent": [ [ {
             "accessibilityText": "Work-From-Home",
-            "rawUrl": "https://example.com/images/work-from-home.png",
+            "rawUrl": "https://assets.jobsforher.com/herkeycom/assets/img/banners/v2/Women_in_procurement_Groups.jpg",
             "type": "image"
           }, {
             "actionLink": "https://community-platform.com/work-from-home",
@@ -24,13 +52,11 @@
                 "href": "https://community-platform.com/work-from-home"
               },
               "text": "Join Community"
-            }, {
-              "text": "Save Community"
             } ],
             "type": "chips"
           } ], [ {
             "accessibilityText": "Women Freelancers",
-            "rawUrl": "https://example.com/images/women-freelancers.png",
+            "rawUrl": "https://assets.jobsforher.com/herkeycom/assets/img/banners/v2/Women_Freelancerss_Banner.jpg",
             "type": "image"
           }, {
             "actionLink": "https://community-platform.com/women-freelancers",
@@ -43,13 +69,11 @@
                 "href": "https://community-platform.com/women-freelancers"
               },
               "text": "Join Community"
-            }, {
-              "text": "Save Community"
             } ],
             "type": "chips"
           } ], [ {
             "accessibilityText": "RestartHer Academy",
-            "rawUrl": "https://example.com/images/restarther-academy.png",
+            "rawUrl": "https://assets.jobsforher.com/herkeycom/assets/img/banners/v2/Women_in_Finance_Groups_Banner.jpg",
             "type": "image"
           }, {
             "actionLink": "https://community-platform.com/restarther-academy",
@@ -62,8 +86,6 @@
                 "href": "https://community-platform.com/restarther-academy"
               },
               "text": "Join Community"
-            }, {
-              "text": "Save Community"
             } ],
             "type": "chips"
           } ] ]
@@ -79,7 +101,7 @@
         }
       }
     },
-    "targetPage": "End Session",
+    "targetFlow": "ANYTHING ELSE",
     "name": "c7d65459-0dac-444b-9f91-7f8c17f748f1"
   }, {
     "intent": "Most Active Community",
@@ -88,97 +110,87 @@
         "payload": {
           "richContent": [ [ {
             "accessibilityText": "Champions Club",
-            "rawUrl": "https://example.com/images/champions-club.png",
+            "rawUrl": "https://assets.jobsforher.com/herkeycom/assets/img/banners/v2/DivHERsity_Club_Group_Banner_2_Aug.jpg",
             "type": "image"
           }, {
-            "actionLink": "https://community-platform.com/champions-club",
+            "actionLink": "https://www.herkey.com/groups/champions-club/65803639d6ffb0d0f4b8cc95",
             "subtitle": "Private | 53 Members",
             "title": "Champions Club",
             "type": "info"
           }, {
             "options": [ {
               "anchor": {
-                "href": "https://community-platform.com/champions-club"
+                "href": "https://www.herkey.com/groups/champions-club/65803639d6ffb0d0f4b8cc95"
               },
               "text": "Join Community"
-            }, {
-              "text": "Save Community"
             } ],
             "type": "chips"
           } ], [ {
             "accessibilityText": "Women on a Career Break",
-            "rawUrl": "https://example.com/images/women-career-break.png",
+            "rawUrl": "https://assets.jobsforher.com/herkeycom/assets/img/banners/v2/HerRising_Groups_Banner.jpg",
             "type": "image"
           }, {
-            "actionLink": "https://community-platform.com/women-career-break",
+            "actionLink": "https://www.herkey.com/groups/champions-club/65803639d6ffb0d0f4b8cc95",
             "subtitle": "Public | 36,445 Members",
             "title": "Women on a Career Break",
             "type": "info"
           }, {
             "options": [ {
               "anchor": {
-                "href": "https://community-platform.com/women-career-break"
+                "href": "https://www.herkey.com/groups/champions-club/65803639d6ffb0d0f4b8cc95"
               },
               "text": "Join Community"
-            }, {
-              "text": "Save Community"
             } ],
             "type": "chips"
           } ], [ {
             "accessibilityText": "Career Growth",
-            "rawUrl": "https://example.com/images/career-growth.png",
+            "rawUrl": "https://assets.jobsforher.com/herkeycom/assets/img/banners/v2/Women_in_agriculture_Groups.jpg",
             "type": "image"
           }, {
-            "actionLink": "https://community-platform.com/career-growth",
+            "actionLink": "https://www.herkey.com/groups/champions-club/65803639d6ffb0d0f4b8cc95",
             "subtitle": "Public | 21,940 Members",
             "title": "Career Growth",
             "type": "info"
           }, {
             "options": [ {
               "anchor": {
-                "href": "https://community-platform.com/career-growth"
+                "href": "https://www.herkey.com/groups/champions-club/65803639d6ffb0d0f4b8cc95"
               },
               "text": "Join Community"
-            }, {
-              "text": "Save Community"
             } ],
             "type": "chips"
           } ], [ {
             "accessibilityText": "Work-Life Balance",
-            "rawUrl": "https://example.com/images/work-life-balance.png",
+            "rawUrl": "https://assets.jobsforher.com/herkeycom/assets/img/banners/v2/DivHERsity_Club_Group_Banner_2_Aug.jpg",
             "type": "image"
           }, {
-            "actionLink": "https://community-platform.com/work-life-balance",
+            "actionLink": "https://www.herkey.com/groups/champions-club/65803639d6ffb0d0f4b8cc95",
             "subtitle": "Public | 1,751 Members",
             "title": "Work-Life Balance",
             "type": "info"
           }, {
             "options": [ {
               "anchor": {
-                "href": "https://community-platform.com/work-life-balance"
+                "href": "https://www.herkey.com/groups/champions-club/65803639d6ffb0d0f4b8cc95"
               },
               "text": "Join Community"
-            }, {
-              "text": "Save Community"
             } ],
             "type": "chips"
           } ], [ {
             "accessibilityText": "Women Entrepreneurs",
-            "rawUrl": "https://example.com/images/women-entrepreneurs.png",
+            "rawUrl": "https://assets.jobsforher.com/herkeycom/assets/img/banners/v2/DivHERsity_Club_Group_Banner_2_Aug.jpg",
             "type": "image"
           }, {
-            "actionLink": "https://community-platform.com/women-entrepreneurs",
+            "actionLink": "https://www.herkey.com/groups/champions-club/65803639d6ffb0d0f4b8cc95",
             "subtitle": "Public | 3,040 Members",
             "title": "Women Entrepreneurs",
             "type": "info"
           }, {
             "options": [ {
               "anchor": {
-                "href": "https://community-platform.com/women-entrepreneurs"
+                "href": "https://www.herkey.com/groups/champions-club/65803639d6ffb0d0f4b8cc95"
               },
               "text": "Join Community"
-            }, {
-              "text": "Save Community"
             } ],
             "type": "chips"
           } ] ]
@@ -194,7 +206,7 @@
         }
       }
     },
-    "targetPage": "End Session",
+    "targetFlow": "ANYTHING ELSE",
     "name": "eb39db1b-26e0-4806-92d0-127ddb6a5f3e"
   } ]
 }

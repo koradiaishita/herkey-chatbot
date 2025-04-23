@@ -1,0 +1,100 @@
+{
+  "name": "e4fea807-338d-457c-8472-2943a7a44c48",
+  "displayName": "Ask Anything else",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+    "messages": [ {
+      "text": {
+        "text": [ "Is there anything else I can help you with today?" ]
+      },
+      "languageCode": "en"
+    }, {
+      "payload": {
+        "richContent": [ [ {
+          "options": [ {
+            "text": "Yes"
+          }, {
+            "text": "No"
+          } ],
+          "type": "chips"
+        } ] ]
+      },
+      "languageCode": "en"
+    } ],
+    "advancedSettings": {
+      "playbackInterruptionSettings": {
+      
+      },
+      "dtmfSettings": {
+        "useSystemEntityRule": false
+      }
+    }
+  },
+  "transitionRoutes": [ {
+    "intent": "Yes",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "Hello! I'm Asha, your AI assistant from JobsForHer Foundation. How can I support your professional journey today?" ]
+        },
+        "languageCode": "en"
+      }, {
+        "payload": {
+          "richContent": [ [ {
+            "options": [ {
+              "text": "Job Search"
+            }, {
+              "text": "Find Events"
+            }, {
+              "text": "Mentorship"
+            }, {
+              "text": "Resume Analysis"
+            }, {
+              "text": "Join Community"
+            }, {
+              "text": "Learning resources"
+            }, {
+              "text": "Find your passion"
+            }, {
+              "text": "Feedback"
+            } ],
+            "type": "chips"
+          } ] ]
+        },
+        "languageCode": "en"
+      } ],
+      "advancedSettings": {
+        "playbackInterruptionSettings": {
+        
+        },
+        "dtmfSettings": {
+          "useSystemEntityRule": false
+        }
+      }
+    },
+    "targetFlow": "Default Start Flow",
+    "name": "1bde1eb8-0597-40ad-bddf-07a756d73600"
+  }, {
+    "intent": "No",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "Thank you for contacting us today. Have a great day!" ]
+        },
+        "languageCode": "en"
+      } ],
+      "advancedSettings": {
+        "playbackInterruptionSettings": {
+        
+        },
+        "dtmfSettings": {
+          "useSystemEntityRule": false
+        }
+      }
+    },
+    "targetPage": "End Flow",
+    "name": "cf18f3ed-6c7f-48a0-b8cf-a0c3caf88650"
+  } ]
+}

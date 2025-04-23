@@ -140,17 +140,17 @@
         "payload": {
           "richContent": [ [ {
             "accessibilityText": "Software Engineer",
-            "rawUrl": "https://example.com/images/job1.png",
+            "rawUrl": "https://assets.jobsforher.com/uploads/v3/companies/e77e219b9680d11514b7769941a22e69779cd497376956f512.jpg",
             "type": "image"
           }, {
-            "actionLink": "https://your-job-link.com/job1",
-            "subtitle": "Remote | Entry Level",
+            "actionLink": "https://www.herkey.com/jobs",
+            "subtitle": "Remote | Entry Level ",
             "title": "Software Engineer",
             "type": "info"
           }, {
             "options": [ {
               "anchor": {
-                "href": "https://your-job-link.com/job1"
+                "href": "https://www.herkey.com/jobs"
               },
               "text": "Apply Now"
             }, {
@@ -159,17 +159,17 @@
             "type": "chips"
           } ], [ {
             "accessibilityText": "Data Scientist",
-            "rawUrl": "https://example.com/images/job2.png",
+            "rawUrl": "https://assets.jobsforher.com/uploads/v3/companies/5156e77065156404f41f3d7234a0dce1b309ba36cc1b9e3100.jpg",
             "type": "image"
           }, {
-            "actionLink": "https://your-job-link.com/job2",
+            "actionLink": "https://www.herkey.com/jobs",
             "subtitle": "Onsite | Mid Level",
             "title": "Data Scientist",
             "type": "info"
           }, {
             "options": [ {
               "anchor": {
-                "href": "https://your-job-link.com/job2"
+                "href": "https://www.herkey.com/jobs"
               },
               "text": "Apply Now"
             }, {
@@ -178,17 +178,17 @@
             "type": "chips"
           } ], [ {
             "accessibilityText": "DevOps Engineer",
-            "rawUrl": "https://example.com/images/job3.png",
+            "rawUrl": "https://assets.jobsforher.com/uploads/v3/companies/d035a0b2e895dba83b87beca1c8d00.jpg",
             "type": "image"
           }, {
-            "actionLink": "https://your-job-link.com/job3",
+            "actionLink": "https://www.herkey.com/jobs",
             "subtitle": "Hybrid | Senior Level",
             "title": "DevOps Engineer",
             "type": "info"
           }, {
             "options": [ {
               "anchor": {
-                "href": "https://your-job-link.com/job3"
+                "href": "https://www.herkey.com/jobs"
               },
               "text": "Apply Now"
             }, {
@@ -213,11 +213,17 @@
     "targetPage": "show_wfh_jobs",
     "name": "a5159ef5-72df-42ae-9a23-ffe9e25cbd2e"
   }, {
-    "condition": "$session.params.job_mode = \"WFO\" OR $session.params.job_mode = \"Hybrid\"",
+    "condition": "$session.params.job_mode = \"WFO\" AND $page.params.status = FINAL",
     "triggerFulfillment": {
     
     },
     "targetPage": "ask_location",
     "name": "a68dfb4e-0d48-4ef9-b975-2f8051f08693"
+  }, {
+    "condition": "$session.params.job_role = \"Hybrid\" AND $page.params.status = FINAL",
+    "triggerFulfillment": {
+    
+    },
+    "name": "6fc9321e-2c4e-4d53-a9ea-05f91cddec69"
   } ]
 }

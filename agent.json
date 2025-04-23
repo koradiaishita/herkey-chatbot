@@ -41,7 +41,7 @@
   
   },
   "answerFeedbackSettings": {
-  
+    "enableAnswerFeedback": true
   },
   "webClientSettings": {
     "boxBorderRadius": "0"

@@ -82,7 +82,7 @@
     "triggerFulfillment": {
     
     },
-    "targetPage": "End Session",
+    "targetFlow": "ANYTHING ELSE",
     "name": "029f33b0-d161-41af-880c-d644e71d8770"
   } ]
 }

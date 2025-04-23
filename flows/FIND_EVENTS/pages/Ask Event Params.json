@@ -2,6 +2,136 @@
   "name": "070ce8f1-60d4-4969-8deb-a543202762ce",
   "displayName": "Ask Event Params",
   "form": {
-  
-  }
+    "parameters": [ {
+      "displayName": "city",
+      "required": true,
+      "entityType": "@sys.geo-city",
+      "fillBehavior": {
+        "initialPromptFulfillment": {
+          "messages": [ {
+            "text": {
+              "text": [ "Which city or region are you interested in?" ]
+            },
+            "languageCode": "en"
+          } ],
+          "advancedSettings": {
+            "playbackInterruptionSettings": {
+            
+            },
+            "dtmfSettings": {
+              "useSystemEntityRule": false
+            }
+          }
+        }
+      }
+    }, {
+      "displayName": "event",
+      "required": true,
+      "entityType": "@sys.any",
+      "fillBehavior": {
+        "initialPromptFulfillment": {
+          "messages": [ {
+            "text": {
+              "text": [ "What type of events are you looking for?" ]
+            },
+            "languageCode": "en"
+          }, {
+            "payload": {
+              "richContent": [ [ {
+                "options": [ {
+                  "text": "Career Development"
+                }, {
+                  "text": "Workshops"
+                }, {
+                  "text": "Webinars"
+                } ],
+                "type": "chips"
+              } ] ]
+            },
+            "languageCode": "en"
+          } ],
+          "advancedSettings": {
+            "playbackInterruptionSettings": {
+            
+            },
+            "dtmfSettings": {
+              "useSystemEntityRule": false
+            }
+          }
+        }
+      }
+    } ]
+  },
+  "transitionRoutes": [ {
+    "condition": "$page.params.status = FINAL",
+    "triggerFulfillment": {
+      "messages": [ {
+        "payload": {
+          "richContent": [ [ {
+            "accessibilityText": "Advance Your Career with a Premier Executive MBA from Great Lakes",
+            "rawUrl": "https://d2jbshxkjdydpu.cloudfront.net/uploads/v1/create_post/1745407267014021114_92fb42a28d044269b06e0438993acddf.png",
+            "type": "image"
+          }, {
+            "actionLink": "https://events.herkey.com/events/advance-your-career-with-a-premier-executive-mba-from-great-lakes",
+            "subtitle": "Career Development | Online | 16th Apr, 2025 to 30th Apr, 2025 | 10:00am to 6:00pm",
+            "title": "Advance Your Career with a Premier Executive MBA from Great Lakes",
+            "type": "info"
+          }, {
+            "options": [ {
+              "anchor": {
+                "href": "https://events.herkey.com/events/advance-your-career-with-a-premier-executive-mba-from-great-lakes"
+              },
+              "text": "Register"
+            } ],
+            "type": "chips"
+          } ], [ {
+            "accessibilityText": "Back to Work - RestartHer with MS office",
+            "rawUrl": "https://www.herkey.com/images/metadata/session-1.jpg",
+            "type": "image"
+          }, {
+            "actionLink": "https://events.herkey.com/events/back-to-work-restarther-with-ms-office",
+            "subtitle": "Career Development | Online | 16th Apr, 2025 to 14th May, 2025 | 12:00pm to 11:00pm | ₹1 - ₹9999",
+            "title": "Back to Work - RestartHer with MS office",
+            "type": "info"
+          }, {
+            "options": [ {
+              "anchor": {
+                "href": "https://events.herkey.com/events/back-to-work-restarther-with-ms-office"
+              },
+              "text": "Register"
+            } ],
+            "type": "chips"
+          } ], [ {
+            "accessibilityText": "SkillReBoot program: Restart Your Career Journey",
+            "rawUrl": "https://www.herkey.com/images/metadata/repost-1.jpg",
+            "type": "image"
+          }, {
+            "actionLink": "https://events.herkey.com/events/skillreboot-program-restart-your-career-journey",
+            "subtitle": "Career Development | Online | 21st Apr, 2025 to 20th May, 2025 | 6:00pm to 11:00pm",
+            "title": "SkillReBoot program: Restart Your Career Journey",
+            "type": "info"
+          }, {
+            "options": [ {
+              "anchor": {
+                "href": "https://events.herkey.com/events/skillreboot-program-restart-your-career-journey"
+              },
+              "text": "Register"
+            } ],
+            "type": "chips"
+          } ] ]
+        },
+        "languageCode": "en"
+      } ],
+      "advancedSettings": {
+        "playbackInterruptionSettings": {
+        
+        },
+        "dtmfSettings": {
+          "useSystemEntityRule": false
+        }
+      }
+    },
+    "targetFlow": "ANYTHING ELSE",
+    "name": "7f8eb3dc-fff8-4b6e-9d1e-239c16b7f765"
+  } ]
 }

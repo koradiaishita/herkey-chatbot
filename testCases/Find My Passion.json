@@ -1,0 +1,180 @@
+{
+  "name": "514df545-5be1-426a-809b-27011824c0fd",
+  "displayName": "Find My Passion",
+  "testCaseConversationTurns": [ {
+    "userInput": {
+      "isWebhookEnabled": true,
+      "input": {
+        "text": {
+          "text": "Hi"
+        },
+        "languageCode": "en"
+      }
+    },
+    "virtualAgentOutput": {
+      "triggeredIntent": {
+        "name": "Default Welcome Intent"
+      },
+      "currentPage": {
+        "name": "Select",
+        "flow": "Default Start Flow"
+      },
+      "textResponses": [ {
+        "text": [ "Greetings! I'm Asha from JobsForHer Foundation. I'm here to support women in their career journeys. How may I help you today?" ]
+      } ],
+      "currentFlow": {
+        "name": "Default Start Flow"
+      }
+    }
+  }, {
+    "userInput": {
+      "isWebhookEnabled": true,
+      "input": {
+        "text": {
+          "text": "Find your passion"
+        },
+        "languageCode": "en"
+      }
+    },
+    "virtualAgentOutput": {
+      "triggeredIntent": {
+        "name": "Find your passion"
+      },
+      "currentPage": {
+        "name": "Ask a question",
+        "flow": "FIND_YOUR_PASSION"
+      },
+      "textResponses": [ {
+        "text": [ "Welcome to the Passion Discovery Assessment by JobsForHer Foundation! I'm Asha, your AI career guide. This assessment will help you uncover your professional passion through 5 key dimensions: Interests, Skills, Values, Energy, and Legacy. By understanding these aspects of yourself, you'll gain clarity on career paths that truly align with who you are. Let's begin this journey of self-discovery together!" ]
+      }, {
+        "text": [ "What activities make you lose track of time when you're doing them?" ]
+      } ],
+      "currentFlow": {
+        "name": "FIND_YOUR_PASSION"
+      }
+    }
+  }, {
+    "userInput": {
+      "isWebhookEnabled": true,
+      "input": {
+        "text": {
+          "text": "Creative pursuits"
+        },
+        "languageCode": "en"
+      }
+    },
+    "virtualAgentOutput": {
+      "currentPage": {
+        "name": "Ask a question",
+        "flow": "FIND_YOUR_PASSION"
+      },
+      "textResponses": [ {
+        "text": [ "What abilities have consistently earned you recognition or that others seek your help with?" ]
+      } ],
+      "currentFlow": {
+        "name": "FIND_YOUR_PASSION"
+      }
+    }
+  }, {
+    "userInput": {
+      "isWebhookEnabled": true,
+      "input": {
+        "text": {
+          "text": "Technical skill"
+        },
+        "languageCode": "en"
+      }
+    },
+    "virtualAgentOutput": {
+      "currentPage": {
+        "name": "Ask a question",
+        "flow": "FIND_YOUR_PASSION"
+      },
+      "textResponses": [ {
+        "text": [ "#Values: What principles or causes motivate you to take action, even when it's difficult?\n" ]
+      } ],
+      "currentFlow": {
+        "name": "FIND_YOUR_PASSION"
+      }
+    }
+  }, {
+    "userInput": {
+      "isWebhookEnabled": true,
+      "input": {
+        "text": {
+          "text": "Service and helping others"
+        },
+        "languageCode": "en"
+      }
+    },
+    "virtualAgentOutput": {
+      "currentPage": {
+        "name": "Ask a question",
+        "flow": "FIND_YOUR_PASSION"
+      },
+      "textResponses": [ {
+        "text": [ "When have people consistently complimented you or asked for your help with something?" ]
+      } ],
+      "currentFlow": {
+        "name": "FIND_YOUR_PASSION"
+      }
+    }
+  }, {
+    "userInput": {
+      "isWebhookEnabled": true,
+      "input": {
+        "text": {
+          "text": "Technical skills"
+        },
+        "languageCode": "en"
+      }
+    },
+    "virtualAgentOutput": {
+      "currentPage": {
+        "name": "Ask a question",
+        "flow": "FIND_YOUR_PASSION"
+      },
+      "textResponses": [ {
+        "text": [ "What impact would you like to be remembered for in your professional life?" ]
+      } ],
+      "currentFlow": {
+        "name": "FIND_YOUR_PASSION"
+      }
+    }
+  }, {
+    "userInput": {
+      "isWebhookEnabled": true,
+      "input": {
+        "text": {
+          "text": "Creating meaningful change in systems, industries, or communities"
+        },
+        "languageCode": "en"
+      }
+    },
+    "virtualAgentOutput": {
+      "currentPage": {
+        "name": "Ask Anything else",
+        "flow": "ANYTHING ELSE"
+      },
+      "textResponses": [ {
+        "text": [ "This is a good framework for identifying and pursuing a career path based on personal passions and skills.  However, to make it truly useful, we need to fill in the blanks for the career paths suggested.  The current text only highlights the *patterns* without offering concrete career suggestions.\n\nHere are some potential career paths based on the identified patterns (creative pursuits + technical skills + service and helping others):\n\n**Possible Career Paths (replace bracketed information with specific examples):**\n\n* **[Career path 1]: UX/UI Designer:** This combines creativity (designing user interfaces) with technical skills (understanding user experience principles and potentially coding) and a service-oriented approach (improving user experience and making products more accessible).\n\n* **[Career path 2]:  Technical Writer/Documentation Specialist:** This role requires strong technical skills to understand complex systems, creative writing skills to explain them clearly, and a service-oriented approach to help users understand and utilize the technology effectively.  This could also extend to roles like creating educational content or tutorials.\n\n* **[Career path 3]:  Game Developer (with a focus on accessibility):** This combines creativity (game design and development), technical skills (programming, art, animation), and a service-oriented approach by focusing on making games accessible to a wider audience (e.g., players with disabilities).\n\n\n**Improving the Response:**\n\nTo make this a stronger response, the next steps should include:\n\n* **Specific examples of JobsForHer resources:** Instead of just saying \"Browse related job listings,\" suggest specific search terms or links within the JobsForHer platform.\n* **Tailored skill development suggestions:**  Instead of a general statement, list specific skills to develop (e.g., \"Learn Figma for UX design,\" \"Improve your technical writing skills by taking a course on style guides\").\n* **Concrete networking opportunities:**  Mention specific professional organizations or events relevant to the suggested career paths.\n\n\nBy adding these specifics, the response becomes a much more actionable and helpful guide for someone trying to identify and pursue their career passion.\n" ],
+        "containAiGeneratedContent": true,
+        "containGeneratorsContent": true
+      }, {
+        "text": [ "Is there anything else I can help you with today?" ]
+      } ],
+      "currentFlow": {
+        "name": "ANYTHING ELSE"
+      }
+    }
+  } ],
+  "creationTime": {
+    "seconds": 1745409658,
+    "nanos": 482348000
+  },
+  "testConfig": {
+    "flow": "Default Start Flow",
+    "page": "Start Page"
+  },
+  "languageCode": "en"
+}
