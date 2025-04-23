@@ -34,6 +34,9 @@
   "speakerIdSettings": {
   
   },
+  "genAppBuilderSettings": {
+    "engine": "projects/443180956629/locations/global/collections/default_collection/engines/b2c5e90b-20ef-4b0c-96d1-49537c77a2cf-chat-1745391195"
+  },
   "duplexSettings": {
   
   },

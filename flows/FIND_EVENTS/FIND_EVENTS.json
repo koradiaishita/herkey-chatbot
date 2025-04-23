@@ -1,6 +1,14 @@
 {
   "name": "95eafce6-a1d8-4998-94bf-2cbbd0a82472",
   "displayName": "FIND_EVENTS",
+  "transitionRoutes": [ {
+    "condition": "True",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "Ask Event Params",
+    "name": "2f425198-68f2-4dd3-8085-8f67a34cc21b"
+  } ],
   "eventHandlers": [ {
     "event": "sys.no-match-default",
     "triggerFulfillment": {
@@ -28,9 +36,48 @@
     "modelType": "MODEL_TYPE_ADVANCED",
     "classificationThreshold": 0.30000001
   },
+  "knowledgeConnectorSettings": {
+    "enabled": true,
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "$request.knowledge.answers[0]" ]
+        },
+        "languageCode": "en"
+      }, {
+        "languageCode": "en",
+        "knowledgeInfoCard": {
+          "maximumSnippets": 1
+        }
+      } ]
+    },
+    "dataStoreConnections": [ {
+      "dataStoreType": "UNSTRUCTURED",
+      "dataStore": "projects/443180956629/locations/global/collections/default_collection/dataStores/faqs-asha-data-store_1745391096060",
+      "languageCode": "en",
+      "documentProcessingMode": "CHUNKS",
+      "aclConfig": {
+      
+      },
+      "engineType": "CHAT_ENGINE",
+      "connectorConfig": {
+      
+      },
+      "createTime": {
+        "seconds": 1745391110,
+        "nanos": 211864000
+      },
+      "displayName": "faqs_asha_data_store",
+      "dialogflowAddTime": {
+        "seconds": 1745392516,
+        "nanos": 339000000
+      }
+    } ]
+  },
   "nluSettingsList": [ {
     "modelType": "MODEL_TYPE_ADVANCED",
     "classificationThreshold": 0.30000001,
+    "customConfigKey": "a54cd0c4-a229-47d3-a6d5-375f8084b08e",
     "languageCode": "en"
   } ]
 }

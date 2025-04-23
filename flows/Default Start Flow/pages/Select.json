@@ -30,7 +30,8 @@
     "triggerFulfillment": {
     
     },
-    "name": "7a6ebdde-2d30-4bdd-a8a8-56f39a224361"
+    "name": "7a6ebdde-2d30-4bdd-a8a8-56f39a224361",
+    "targetPlaybook": "Learning Resources Playbook"
   }, {
     "intent": "Find your passion",
     "triggerFulfillment": {
